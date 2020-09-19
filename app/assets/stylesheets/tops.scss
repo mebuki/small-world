@@ -1,3 +1,20 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-main{
+  height: 750px;
+  background-image: image-url("united.png");
+  background-color: rgba(255,255,255,0.8);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title{
+  font-size: 50px;
+}
+
+.message{
+  font-size: 35px;
+}

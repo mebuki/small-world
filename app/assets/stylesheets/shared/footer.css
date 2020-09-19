@@ -1,0 +1,12 @@
+.top-footer{
+  background-color: #3399FF;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title{
+  font-size: 15px;
+}
