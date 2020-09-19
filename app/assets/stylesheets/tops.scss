@@ -1,0 +1,20 @@
+.top-main{
+  height: 750px;
+  background-image: image-url("united.png");
+  background-color: rgba(255,255,255,0.8);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title{
+  font-size: 50px;
+}
+
+.message{
+  font-size: 35px;
+}

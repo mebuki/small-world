@@ -1,0 +1,38 @@
+.top-header{
+  background-color: #3399FF;
+  width: 100vw;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-lists{
+  display: flex;
+  margin-left: 5%;
+}
+
+.middle-lists{
+  display: flex;
+}
+
+.right-lists{
+  display: flex;
+  margin-right: 5%;
+}
+
+.user-nickname{
+  margin-right: 3vw;
+}
+
+.login{
+  margin-right: 3vw;
+}
+
+.title{
+  font-size: 20px;
+}
+
+.l{
+  font-size: 15px;
+}
