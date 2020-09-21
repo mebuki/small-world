@@ -7,8 +7,8 @@
   </ul>
   <ul class = "right-lists">
     <li><%= link_to "名前", "#", class: "user-nickname l" %></li>
-    <li><%= link_to "ログアウト", "#", method: :delete, class: "logout l" %></li>
-    <li><%= link_to "ログイン", "#", class: "login l" %></li>
-    <li><%= link_to "新規登録", "#", class: "signup l" %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout l" %></li>
+    <li><%= link_to "ログイン", new_user_session_path, class: "login l" %></li>
+    <li><%= link_to "新規登録", new_user_registration_path, class: "signup l" %></li>
   </ul>
 </header>
