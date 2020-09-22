@@ -10,6 +10,7 @@
 .left-lists{
   display: flex;
   margin-left: 5%;
+  width: 200px;
 }
 
 .middle-lists{
@@ -19,6 +20,8 @@
 .right-lists{
   display: flex;
   margin-right: 5%;
+  width: 200px;
+
 }
 
 .user-nickname{
@@ -30,9 +33,9 @@
 }
 
 .title{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .l{
-  font-size: 15px;
+  font-size: 18px;
 }

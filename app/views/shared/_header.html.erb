@@ -1,19 +1,18 @@
 <header class = "top-header">
-  <ul class = "left-lists">
-   <li><%= link_to "イベント", "#", class: "event-list l" %></li>
-  </ul>
-  <ul class = "middle-lists">
-   <li><%= link_to "IT'S A SMALL WORLD", root_path, class: "title" %></li>
-  </ul>
+  <div class = "left-lists">
+   <h2><%= link_to "イベント", events_path, class: "event l" %></h2>
+  </div>
+  <div class = "middle-lists">
+   <h1><%= link_to "IT'S A SMALL WORLD", root_path, class: "title" %></h1>
+  </div>
   
-  <ul class = "right-lists">
+  <div class = "right-lists">
   <% if user_signed_in? %>
-    <li><%= link_to current_user.nickname, "#", class: "user-nickname l" %></li>
-    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout l" %></li>
+    <h2><%= link_to current_user.nickname, "#", class: "user-nickname l" %></h2>
+    <h2><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout l" %></h2>
   <% else %>
-  
-    <li><%= link_to "ログイン", new_user_session_path, class: "login l" %></li>
-    <li><%= link_to "新規登録", new_user_registration_path, class: "signup l" %></li>
-  </ul>
+    <h2><%= link_to "ログイン", new_user_session_path, class: "login l" %></h2>
+    <h2><%= link_to "新規登録", new_user_registration_path, class: "signup l" %></h2>
+  </div>
   <% end %>
 </header>
