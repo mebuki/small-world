@@ -5,10 +5,15 @@
   <ul class = "middle-lists">
    <li><%= link_to "IT'S A SMALL WORLD", root_path, class: "title" %></li>
   </ul>
+  
   <ul class = "right-lists">
-    <li><%= link_to "名前", "#", class: "user-nickname l" %></li>
-    <li><%= link_to "ログアウト", "#", method: :delete, class: "logout l" %></li>
-    <li><%= link_to "ログイン", "#", class: "login l" %></li>
-    <li><%= link_to "新規登録", "#", class: "signup l" %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to current_user.nickname, "#", class: "user-nickname l" %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout l" %></li>
+  <% else %>
+  
+    <li><%= link_to "ログイン", new_user_session_path, class: "login l" %></li>
+    <li><%= link_to "新規登録", new_user_registration_path, class: "signup l" %></li>
   </ul>
+  <% end %>
 </header>
