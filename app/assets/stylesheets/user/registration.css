@@ -13,16 +13,16 @@
 }
 
 .form-text{
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .input-default {
-  width: 80%;
+  width: 300px;
   margin-top: 5px;
-  height: 35px;
-  padding: 10px 16px 8px;
+  height: 40px;
+  padding: 10px 0px 8px;
   border: 1px solid #ccc;
   background: #fff;
-  font-size: 16px;
+  font-size: 15px;
   resize: none;
 }
