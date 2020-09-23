@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+
+<div class="event-category">
+  <div class="titles">異文化交流 / Experience a different culture
+  </div>
+  <%=link_to "新規イベント", "#", class:"new-event" %>
+  <ul class="events-list">
+    <li class="lists">
+      <%=link_to "イベント名", "#", method: :get%>
+    </li>
+  </ul>
+</div>
+
+<%= render "shared/footer"%>

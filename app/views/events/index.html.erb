@@ -1,31 +1,31 @@
 <%= render "shared/header" %>
 
   <div class="events-main">
-    <div class="event-title">イベント一覧</div>
+    <div class="events-title">イベント一覧</div>
     <div class="events">
       <div class="events-l">
-        <%=link_to "#" do %>
+        <%=link_to language_events_path do %>
           <%=image_tag "language.png", size:"250x200", class: "event-btn"%>
         <% end %>
         <div class="event-category-language">言語交換 / Language Exchange
         </div>
       </div>
       <div class="events-c">
-        <%=link_to "#" do %>
+        <%=link_to culture_events_path do %>
           <%=image_tag "culture.jpg", size:"250x200", class: "event-btn"%>
         <% end %>
         <div class="event-category-culture">異文化体験 / Experience a different culture
         </div>
       </div>
       <div class="events-h">
-        <%=link_to "#" do %>
+        <%=link_to hangout_events_path do %>
           <%=image_tag "hangout.jpg", size:"250x200", class: "event-btn"%>
         <% end %>
         <div class="event-category-hangout">おでかけ / Hang out
         </div>
       </div>
       <div class="events-o">
-        <%=link_to "#" do %>
+        <%=link_to others_events_path do %>
           <%=image_tag "japan.jpg", size:"250x200", class: "event-btn"%>
         <% end %>
         <div class="event-category-others">その他 / Others
