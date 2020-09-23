@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+
+<div class="event-category">
+  <div class="titles">その他 / Others
+  </div>
+  <%=link_to "新規イベント", "#", class:"new-event" %>
+  <ul class="events-list">
+    <li class="lists">
+      <%=link_to "イベント名", "#", method: :get%>
+    </li>
+  </ul>
+</div>
+
+<%= render "shared/footer"%>
