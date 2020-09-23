@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_031710) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "porpose_id", null: false
+    t.integer "purpose_id", null: false
     t.string "place", null: false
     t.time "event_time", null: false
     t.date "event_day", null: false
