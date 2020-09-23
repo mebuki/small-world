@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   belongs_to_active_hash :purpose
 
   with_options presence: true do
-    validates :name, :place, :event_time, :event_day, :event_info, :event_info
+    validates :name, :place, :time, :info
     validates :purpose_id, numericality: { other_than: 0 }
   end
 end
