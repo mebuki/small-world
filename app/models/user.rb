@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
+  has_many :user_events
+  has_many :events, through: :user_events
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :country 
   belongs_to_active_hash :prefecture
