@@ -36,8 +36,13 @@ Things you may want to cover:
 | prefecture_id     | integer   | null: false                    |
 
 ## Association
+<<<<<<< HEAD
 has_many :event
 has_many :comments
+=======
+has_many: user_events
+has_many: events, through: user_events
+>>>>>>> parent of bfe95c5... モデルの作成
 
 
 ## eventsテーブル
@@ -46,6 +51,7 @@ has_many :comments
 | ----------------- | --------- | ------------------------------ |
 | name              | string    | null: false                    |
 | porpose_id        | integer   | null: false                    |
+<<<<<<< HEAD
 | place             | string    | null: false                    |
 | time              | string    | null: false                    |
 | info              | text      | null: false                    |
@@ -54,6 +60,17 @@ has_many :comments
 ## Association
 belongs_to :user
 has_many :comments
+=======
+| where             | string    | null: false                    |
+| when              | integer   | null: false                    |
+| info              | integer   | null: false                    |
+| comment           | references| null: false, foreign_key: true |
+
+## Association
+has_many: user_events
+has_many: users, through: user_events
+belongs_to: comments
+>>>>>>> parent of bfe95c5... モデルの作成
 
 
 ## commentsテーブル
