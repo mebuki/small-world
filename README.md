@@ -44,7 +44,7 @@ has_many :comments
 
 | Column            | Type      | Options                        |
 | ----------------- | --------- | ------------------------------ |
-| porpose_id        | integer   | null: false                    |
+| purpose_id        | integer   | null: false                    |
 | name              | string    | null: false                    |
 | place             | string    | null: false                    |
 | time              | string    | null: false                    |
