@@ -16,4 +16,5 @@ class User < ApplicationRecord
     validates :country_id, :prefecture_id, numericality: { other_than: 0 }
   end
 
+
 end
