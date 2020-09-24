@@ -16,15 +16,17 @@ ActiveRecord::Schema.define(version: 2020_09_23_031710) do
     t.string "name", null: false
     t.integer "purpose_id", null: false
     t.string "place", null: false
-    t.string "time", null: false
+    t.time "event_time", null: false
+    t.date "event_day", null: false
+    t.datetime "event_info", null: false
     t.text "info", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "user_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "event_id"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_user_events_on_event_id"

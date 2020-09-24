@@ -1,27 +1,3 @@
 <%= render "shared/header" %>
 
-<%= form_with model: @event,  class: "event-information", local: true do |f| %>
-  <div class="event-new">
-    <p>Let's do something!!</p>
-  </div>
-  <div class="event-list">
-    <div class="event-a">目的
-      <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class: "input-id", id: "purpose"}) %>
-    </div>
-    <div class="event-a">名前
-      <%= f.text_area :name, class: "input", id: "name" %>
-    </div>
-    <div class="event-a">日時
-      <%= f.text_area :time, class: "input", id: "time" %>
-    </div>
-    <div class="event-a">場所
-      <%= f.text_area :place, class: "input", id: "place" %>
-    </div>
-    <div class="event-a">詳細
-      <%= f.text_area :info, class: "input-info", id: "info" %>
-    </div>
-  </div>
-  <%= f.submit "Do it!!" ,class:"events-btn" %>
-<% end %>
-
 <%= render "shared/footer"%>
