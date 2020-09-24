@@ -47,7 +47,9 @@ has_many :comments
 | purpose_id        | integer   | null: false                    |
 | name              | string    | null: false                    |
 | place             | string    | null: false                    |
-| time              | string    | null: false                    |
+| year_id           | integer   | null: false                    |
+| month_id          | integer   | null: false                    |
+| day_id            | integer   | null: false                    |
 | info              | text      | null: false                    |
 | user              | references| null: false, foreign_key: true |
 
