@@ -49,7 +49,7 @@ has_many :comments
 | place             | string    | null: false                    |
 | time              | string    | null: false                    |
 | info              | text      | null: false                    |
-| comment           | references| null: false, foreign_key: true |
+| user              | references| null: false, foreign_key: true |
 
 ## Association
 belongs_to :user
