@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
   <div class="events-main">
-    <div class="events-title">イベント一覧</div>
+      <%=link_to "新規イベント", new_event_path, class:"new-event" %>
     <div class="events">
       <div class="events-l">
         <%=link_to language_events_path do %>
