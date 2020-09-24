@@ -36,9 +36,8 @@ Things you may want to cover:
 | prefecture_id     | integer   | null: false                    |
 
 ## Association
-has_many: user_events
-has_many: events, through: user_events
-has_many: comments
+has_many :event
+has_many :comments
 
 
 ## eventsテーブル
@@ -48,29 +47,13 @@ has_many: comments
 | name              | string    | null: false                    |
 | porpose_id        | integer   | null: false                    |
 | place             | string    | null: false                    |
-| event_time        | time      | null: false                    |
-| event_day         | date      | null: false                    |
-| event_info        | datetime  | null: false                    |
+| time              | string    | null: false                    |
 | info              | text      | null: false                    |
 | comment           | references| null: false, foreign_key: true |
 
 ## Association
-has_many: user_events
-has_many: users, through: user_events
-belongs_to: comments
-
-
-## user_eventsテーブル
-
-| Column            | Type      | Options                        |
-| ----------------- | --------- | ------------------------------ |
-| user              | references| null: false, foreign_key: true |
-| event             | references| null: false, foreign_key: true |
-
-## Association
-
-belongs_to: user
-belongs_to: event
+belongs_to :user
+has_many :comments
 
 
 ## commentsテーブル
