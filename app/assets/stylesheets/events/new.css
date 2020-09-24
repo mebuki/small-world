@@ -25,6 +25,15 @@
   margin-bottom: 10px;
 }
 
+.input-ids{
+  height: 30px;
+  width: 98px;
+  border: 1px double white;
+  resize: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
 .input{
   height: 30px;
   width: 300px;
