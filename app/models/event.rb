@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
-  has_many :user_events
-  has_many :users, through: :user_events
+  has_many :event_users
+  has_many :users, through: :event_users
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :purpose
