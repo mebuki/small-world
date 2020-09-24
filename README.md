@@ -36,25 +36,24 @@ Things you may want to cover:
 | prefecture_id     | integer   | null: false                    |
 
 ## Association
-has_many: user_events
-has_many: events, through: user_events
+has_many :event
+has_many :comments
 
 
 ## eventsテーブル
 
 | Column            | Type      | Options                        |
 | ----------------- | --------- | ------------------------------ |
+| purpose_id        | integer   | null: false                    |
 | name              | string    | null: false                    |
-| porpose_id        | integer   | null: false                    |
-| where             | string    | null: false                    |
-| when              | integer   | null: false                    |
-| info              | integer   | null: false                    |
-| comment           | references| null: false, foreign_key: true |
+| place             | string    | null: false                    |
+| time              | string    | null: false                    |
+| info              | text      | null: false                    |
+| user              | references| null: false, foreign_key: true |
 
 ## Association
-has_many: user_events
-has_many: users, through: user_events
-belongs_to: comments
+belongs_to :user
+has_many :comments
 
 
 ## commentsテーブル
