@@ -23,7 +23,8 @@
       i n f o :  <%=@event.info%>
     </div>
   </div>
-  <%=link_to "編集する", edit_event_path(@event.id) %>
+  <%=link_to "編集する", edit_event_path(@event.id), method: :get, class: "event-edit" %>
+  <%=link_to "削除する", event_path, method: :delete, class: "event-destroy" %>
 </div>
 
 <%= render "shared/footer"%>
