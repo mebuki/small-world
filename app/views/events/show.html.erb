@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+
+<div class="event-show">
+  <div class="event-show-info">
+    <div class="show-name">
+      n a m e :  <%=@event.name%>
+    </div>
+    <div class="show-time">
+      <div class="show-month">
+        w h e n :  <%=@event.month.name%>
+      </div>
+      <div class="show-day">
+        <%=@event.day.name%>th
+      </div>
+      <div class="show-year">
+        <%=@event.year.name%>
+      </div>
+    </div>
+    <div class="show-place">
+      w h e r e :  <%=@event.place%>
+    </div>
+    <div class="show-info">
+      i n f o :  <%=@event.info%>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer"%>
