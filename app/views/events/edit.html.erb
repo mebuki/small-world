@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+<%= form_with model: @event,  class: "event-information", method: :patch,local: true do |f| %>
+  <div class="event-new">
+    <p>Let's do something!!</p>
+  </div>
+  <div class="event-list">
+    <div class="event-a">目的
+      <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class: "input-id", id: "purpose"}) %>
+    </div>
+    <div class="event-a">名前
+      <%= f.text_area :name, class: "input", id: "name" %>
+    </div>
+    <div class="event-a">日時
+      <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class: "input-ids", id: "year"}) %>
+      <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class: "input-ids", id: "month"}) %>
+      <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class: "input-ids", id: "day"}) %>
+    </div>
+    <div class="event-a">場所
+      <%= f.text_area :place, class: "input", id: "place" %>
+    </div>
+    <div class="event-a">詳細
+      <%= f.text_area :info, class: "input-info", id: "info" %>
+    </div>
+  </div>
+  <%= f.submit "Do it!!" ,class:"events-btn" %>
+<% end %>
+
+<%= render "shared/footer"%>
