@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
   <div class="events-main">
-    <div class="events-title">イベント一覧</div>
+      <p><%=link_to "新規イベント", new_event_path, class:"new-event" %></p>
     <div class="events">
       <div class="events-l">
         <%=link_to language_events_path do %>
@@ -14,7 +14,7 @@
         <%=link_to culture_events_path do %>
           <%=image_tag "culture.jpg", size:"250x200", class: "event-btn"%>
         <% end %>
-        <div class="event-category-name">異文化体験 / Experience a different culture
+        <div class="event-category-name">異文化 / a different culture
         </div>
       </div>
       <div class="events-h">

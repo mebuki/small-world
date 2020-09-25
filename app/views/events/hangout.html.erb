@@ -1,14 +1,20 @@
 <%= render "shared/header" %>
 
 <div class="event-category">
-  <div class="titles">おでかけ / Hang out
+  <div class="titles">おでかけ / Hang Out
   </div>
-  <%=link_to "新規イベント", new_event_path, class:"new-event" %>
+  <% @events.where("purpose_id = 3").each do |event| %>
   <ul class="events-list">
     <li class="lists">
-      <%=link_to "イベント名", "#", method: :get%>
+    <div class="list-name">
+      E v e n t : <%=link_to event.name, "#", method: :get%>
+    </div>
+    <div class="list-time">
+      <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
+    </div>
     </li>
   </ul>
+  <% end %>
 </div>
 
 <%= render "shared/footer"%>
