@@ -25,6 +25,7 @@
   </div>
   <%=link_to "編集する", edit_event_path(@event.id), method: :get, class: "event-edit" %>
   <%=link_to "削除する", event_path, method: :delete, class: "event-destroy" %>
+  <%=link_to "質問する", new_event_comment_path(@event.id), method: :get, class: "event-comment" %>
 </div>
 
 <%= render "shared/footer"%>
