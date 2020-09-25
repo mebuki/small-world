@@ -2,32 +2,30 @@
   background-color:#99CCFF;
   height: 100vh;
   width: 100vw;
-  position: relative;
+}
+
+p{
+  text-align: center;
 }
 
 .new-event{
   font-size: 20px;
-  position: absolute;
-  top: 50px;
-  left: 100px;
 }
 
 .events{
   display: flex;
+  justify-content: space-around;
+  margin-top: 250px;
 }
 
 .events-l{
-  margin: 150px 0 0 75px;
 }
 
 .events-c{
-  margin: 500px 0 0 75px;
 }
 
 .events-h{
-  margin: 150px 75px 0 0;
 }
 
 .events-o{
-  margin: 500px 75px 0 0;
 }

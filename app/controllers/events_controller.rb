@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
+  before_action :event_index, only: [:language, :culture, :hangout, :others]
 
-  def index
+  def language
   end
   
   def new
@@ -21,6 +22,10 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:purpose_id, :name, :year_id, :month_id, :day_id, :place, :info).merge(user_id: current_user.id)
+  end
+
+  def event_index
+    @events = Event.all.order("created_at DESC")
   end
   
 end

@@ -3,11 +3,18 @@
 <div class="event-category">
   <div class="titles">その他 / Others
   </div>
+  <% @events.where("purpose_id = 4").each do |event| %>
   <ul class="events-list">
     <li class="lists">
-      <%=link_to "イベント名", "#", method: :get%>
+    <div class="list-name">
+      E v e n t : <%=link_to event.name, "#", method: :get%>
+    </div>
+    <div class="list-time">
+      <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
+    </div>
     </li>
   </ul>
+  <% end %>
 </div>
 
 <%= render "shared/footer"%>
