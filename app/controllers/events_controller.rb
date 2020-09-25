@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :event_index, only: [:language, :culture, :hangout, :others]
-  
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
+
   def new
     @event = Event.new
   end
@@ -15,22 +16,28 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
   end
 
   def edit
-    @event = Event.find(params[:id])
   end
 
   def update
-  
-    @event = Event.find(params[:id])
     if  @event.update(event_params)
       redirect_to events_path
     else
       render :edit
     end
   end
+
+  def destroy
+    if @event.destroy
+      redirect_to events_path
+    else
+      rebder :show
+    end
+  end
+
+  
 
   private
 
@@ -40,6 +47,10 @@ class EventsController < ApplicationController
 
   def event_index
     @events = Event.all.order("created_at DESC")
+  end
+
+  def set_event
+    @event = Event.find(params[:id])
   end
   
 end
