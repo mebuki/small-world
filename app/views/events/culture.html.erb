@@ -6,12 +6,14 @@
   <% @events.where("purpose_id = 2").each do |event| %>
   <ul class="events-list">
     <li class="lists">
+    <%=link_to event_path(event.id) do %>
     <div class="list-name">
-      E v e n t : <%=link_to event.name, event_path(event.id), method: :get%>
+      E v e n t : <%=event.name%>
     </div>
     <div class="list-time">
       <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
     </div>
+    <% end %>
     </li>
   </ul>
   <% end %>
