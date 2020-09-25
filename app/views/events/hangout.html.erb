@@ -7,7 +7,7 @@
   <ul class="events-list">
     <li class="lists">
     <div class="list-name">
-      E v e n t : <%=link_to event.name, "#", method: :get%>
+      E v e n t : <%=link_to event.name, event_path(event.id), method: :get%>
     </div>
     <div class="list-time">
       <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>

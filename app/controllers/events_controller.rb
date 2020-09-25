@@ -1,8 +1,5 @@
 class EventsController < ApplicationController
   before_action :event_index, only: [:language, :culture, :hangout, :others]
-
-  def language
-  end
   
   def new
     @event = Event.new
@@ -17,6 +14,9 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
 
   private
 
