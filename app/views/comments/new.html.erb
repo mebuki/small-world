@@ -1,1 +1,19 @@
-aaa
+<%= render "shared/header" %>
+
+<div class="comments">
+  <%= @event.purpose.name %>
+  <%= @event.name %>
+
+<%= form_with model: @comment, url: event_comments_path do |f| %> 
+  <%= f.text_field :text %>
+  <%= f.submit '送信' %>
+<% end %>
+<div id='comments'>
+  <% @comments.reverse_each do |comment| %>
+    <p><%= comment.text %></p>
+  <% end %>
+</div>
+
+</div>
+
+<%= render "shared/footer"%>
