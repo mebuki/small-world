@@ -9,6 +9,7 @@ class User < ApplicationRecord
   belongs_to_active_hash :prefecture
 
   has_many :events
+  has_many :comments
 
   with_options presence: true do
     validates :nickname, :email, :password

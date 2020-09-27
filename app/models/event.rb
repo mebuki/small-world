@@ -6,6 +6,7 @@ class Event < ApplicationRecord
   belongs_to_active_hash :day
 
   belongs_to :user
+  has_many :comments
 
   with_options presence: true do
     validates :name, :place, :info

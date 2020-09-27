@@ -1,0 +1,39 @@
+.comments{
+  background-color: #99CCFF;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/* .recomment{
+  margin: 20px 0 0 10px;
+  border: 1px solid white;
+  width: 300px;
+  height: 50px;
+} */
+
+
+/* .re-comment{
+  margin: 10px 0 0 20px;
+  border: 1px solid white;
+  width: 500px;
+  height: 70px;
+}
+
+.re-comment-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.re-comment-name{
+  font-size: medium;
+}
+
+.re-comment-time{
+  font-size: small;
+  margin-top: 5px;
+}
+
+.re-comment-text{
+  margin-top: 10px;
+} */
