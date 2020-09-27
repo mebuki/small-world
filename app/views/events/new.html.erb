@@ -15,6 +15,8 @@
       <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class: "input-ids", id: "year"}) %>
       <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class: "input-ids", id: "month"}) %>
       <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class: "input-ids", id: "day"}) %>
+      <%= f.collection_select(:day_of_week_id, DayOfWeek.all, :id, :name, {}, {class: "input-ids", id: "day-of-week"}) %>
+      <%= f.collection_select(:event_time_id, EventTime.all, :id, :name, {}, {class: "input-ids", id: "event-time"}) %>
     </div>
     <div class="event-a">場所
       <%= f.text_area :place, class: "input", id: "place" %>

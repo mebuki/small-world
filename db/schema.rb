@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2020_09_25_055836) do
     t.integer "year_id", null: false
     t.integer "month_id", null: false
     t.integer "day_id", null: false
+    t.integer "day_of_week_id", null: false
+    t.integer "event_time_id", null: false
     t.string "place", null: false
     t.text "info", null: false
     t.bigint "user_id"

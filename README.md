@@ -50,6 +50,8 @@ has_many :comments
 | year_id           | integer   | null: false                    |
 | month_id          | integer   | null: false                    |
 | day_id            | integer   | null: false                    |
+| day_of_week_id    | integer   | null: false                    |
+| event_time_id     | integer   | null: false                    |
 | info              | text      | null: false                    |
 | user              | references| null: false, foreign_key: true |
 
