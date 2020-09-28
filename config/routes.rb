@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     end
     resources :comments, only: [:new, :create]
   end
+  resources :tweets
 end
