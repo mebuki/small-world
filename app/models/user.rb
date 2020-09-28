@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :events
   has_many :tweets
   has_many :reviews
+  has_many :likes
+  has_many :like_events, through: :likes, source: :event
 
   # has_many :comments
 
