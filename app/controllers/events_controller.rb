@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
-  before_action :event_index, only: [:language, :culture, :hangout, :others]
+  before_action :event_index, only: [:search, :language, :culture, :hangout, :others]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :search_event, only: [:search]
+
+  def search
+    @results = @e.result
+  end
 
   def new
     @event = Event.new
@@ -42,7 +47,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:purpose_id, :name, :year_id, :month_id, :day_id, :place, :info, :user_id).merge(user_id: current_user.id)
+    params.require(:event).permit(:purpose_id, :name, :year_id, :month_id, :day_id, :day_of_week_id, :event_time_id, :place, :info, :user_id).merge(user_id: current_user.id)
   end
 
   def event_index
@@ -51,6 +56,10 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def search_event
+    @e = Event.ransack(params[:q])
   end
   
 end
