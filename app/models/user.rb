@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :events
   has_many :tweets
+  has_many :reviews
 
   # has_many :comments
 
