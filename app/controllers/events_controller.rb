@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
-  before_action :event_index, only: [:language, :culture, :hangout, :others]
+  before_action :event_index, only: [:search, :language, :culture, :hangout, :others]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :search_event, only: [:search]
+
+  def search
+    @results = @e.result
+  end
 
   def new
     @event = Event.new
@@ -51,6 +56,10 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def search_event
+    @e = Event.ransack(params[:q])
   end
   
 end

@@ -1,7 +1,8 @@
 <%= render "shared/header" %>
 
   <div class="events-main">
-      <p><%=link_to "新規イベント", new_event_path, class:"new-event" %></p>
+    <p><%=link_to "新規イベント", new_event_path, class:"new-event" %></p>
+    <p><%=link_to "検索", events_search_path, class:"search-event" %></p>
     <div class="events">
       <div class="events-l">
         <%=link_to language_events_path do %>
