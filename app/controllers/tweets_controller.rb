@@ -19,6 +19,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @review = Review.new
+    @reviews = @tweet.reviews.includes(:user)
   end
 
   def edit
