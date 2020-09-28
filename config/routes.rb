@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get :language, :culture, :hangout, :others
     end
-    resources :comments, only: [:new, :create]
+    # resources :comments, only: [:new, :create]
   end
+  resources :tweets
 end

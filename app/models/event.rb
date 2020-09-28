@@ -8,7 +8,7 @@ class Event < ApplicationRecord
   belongs_to_active_hash :event_time
 
   belongs_to :user
-  has_many :comments
+  # has_many :comments
 
   with_options presence: true do
     validates :name, :place, :info

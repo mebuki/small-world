@@ -1,0 +1,11 @@
+<%= render "shared/header" %>
+
+<div class="tweet-show">
+  <%= image_tag @tweet.image %>
+  <%= @tweet.text %>
+</div>
+
+<%= link_to "編集する", edit_tweet_path(@tweet.id), method: :get %>
+<%= link_to "削除する", tweet_path, method: :delete %>
+
+<%= render "shared/footer"%>
