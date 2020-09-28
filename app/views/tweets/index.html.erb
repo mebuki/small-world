@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<% @tweets.each do |tweet| %>
+  <div class="tweets">
+    <% tweet.images.each do |image| %>
+      <%= image_tag image, class:"images" %>
+    <% end %>
+    <%= tweet.text %>
+  </div>
+<% end %>
+ 
+<%= render "shared/footer"%>
