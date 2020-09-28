@@ -1,11 +1,12 @@
 <%= render "shared/header" %>
 
+<%=link_to "新規ツイート", new_tweet_path %>
 <% @tweets.each do |tweet| %>
   <div class="tweets">
-    <% tweet.images.each do |image| %>
-      <%= image_tag image, class:"images" %>
-    <% end %>
+  <%=link_to tweet_path(tweet.id) do %>
+    <%= image_tag tweet.image, class:"tweet-img" %>
     <%= tweet.text %>
+  <% end %>
   </div>
 <% end %>
  

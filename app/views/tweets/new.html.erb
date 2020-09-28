@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <%= form_with model: @tweet, class:"tweet-information", local: true do |f| %>
-  <%= f.file_field :images, name: "tweet[images][]" %>
+  <%= f.file_field :image %>
   <%= f.text_field :text %>
   <%= f.submit "送信" %>
 <% end %>
