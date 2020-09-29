@@ -7,13 +7,26 @@
   <ul class="events-list">
     <li class="lists">
     <%=link_to event_path(event.id) do %>
-    <div class="list-name">
-      E v e n t : <%=event.name%>
-    </div>
-    <div class="list-time">
-      <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
-    </div>
+      <div class="list-name">
+        E v e n t : <%=event.name%>
+      </div>
     <% end %>
+      <div class="list-time">
+        <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
+      </div>
+    <div class="like">
+    <% if user_signed_in? %>
+      <% if event.liked_by?(current_user) %>
+        <%=link_to '参加しない', event_likes_path(event.id), method: :delete %>
+        <span>参加数：</span><%= event.likes.count %>
+      <% else %>
+        <%=link_to '参加する', event_likes_path(event.id), method: :post %>
+        <span>参加数：</span><%= event.likes.count %>
+      <% end %>
+    <% else %>
+      <span>参加数：</span><%= event.likes.count %>
+    <% end %>
+    </div>
     </li>
   </ul>
   <% end %>

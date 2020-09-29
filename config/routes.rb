@@ -7,11 +7,14 @@ Rails.application.routes.draw do
     collection do
       get :language, :culture, :hangout, :others
     end
+    resource :likes, only: [:create, :destroy] 
     # resources :comments, only: [:new, :create]
   end
 
   resources :tweets do
     resources :reviews, only: :create
   end
+
+  resources :users, only: [:show]
 
 end

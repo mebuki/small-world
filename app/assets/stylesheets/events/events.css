@@ -14,7 +14,7 @@
 
 .lists{
   border: 1px double black;
-  height: 60px;
+  height: 90px;
   width: 400px;  
 }
 
@@ -24,4 +24,8 @@
 
 .list-time{
   padding-left: 30px;
+}
+
+.like{
+  padding-left: 200px;
 }

@@ -4,6 +4,7 @@
     <p><%=link_to "新規イベント", new_event_path, class:"new-event" %></p>
     <p><%=link_to "検索", events_search_path, class:"search-event" %></p>
     <P><%=link_to "memory", tweets_path, class:"#" %></p>
+    <P><%=link_to "user", user_path(:id), class:"#" %></p>
     <div class="events">
       <div class="events-l">
         <%=link_to language_events_path do %>

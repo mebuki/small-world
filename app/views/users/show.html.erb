@@ -1,0 +1,21 @@
+<% @users.each do |user| %>
+  <% if current_user.id == user.id %>
+  <ul class="users">
+    <li class="user">
+      <p><span>name: </span><%= user.nickname %></p>
+      <p><span>email: </span><%= user.email %></p>
+        <% if @events.present? %>
+          <% @events.each do |event| %>
+            <p><span>主宰イベント: </span><%=link_to event.name, event_path(event.id) %></p>
+          <% end %>
+        <% end %>
+
+        <% if @like_events.present? %>
+          <% @like_events.each do |event| %>
+            <p><span>参加イベント: </span><%=link_to event.name, event_path(event.id) %></p>
+          <% end %>
+        <% end %>
+    </li>
+  </ul>
+  <% end %>
+<% end %>

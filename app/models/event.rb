@@ -8,7 +8,13 @@ class Event < ApplicationRecord
   belongs_to_active_hash :event_time
 
   belongs_to :user
+  has_many :likes
+
   # has_many :comments
+
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
 
   with_options presence: true do
     validates :name, :place, :info
