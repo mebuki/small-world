@@ -1,10 +1,18 @@
-<%= render "shared/header" %>
-
-  <div class = "top-main">
-    <div class = "main-title">IT'S A SMALL WORLD!!
+<div class= "top">
+  <div class= "title">
+    <span><%=link_to "IT'S a SMALL WORLD", events_path, class: "top-name"%></span>
+  </div>
+  <div class= "top-image">
+  </div>
+  <div class= "top-in">
+    <div class= "top-login-btn">
+      <%=link_to "welcome back", new_user_session_path, class:"top-ins" %>
     </div>
-    <div class = "message">今日はどこを旅しよう
+    <div class= "top-signup-btn">
+      <%=link_to "go to new world", new_user_registration_path, class:"top-ins" %>
+    </div>
+    <div class= "top-info-btn">
+      <%=link_to "about us", "#", class:"top-ins" %>
     </div>
   </div>
-
-<%= render "shared/footer" %> 
+</div>
