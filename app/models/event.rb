@@ -12,6 +12,10 @@ class Event < ApplicationRecord
 
   # has_many :comments
 
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
+
   with_options presence: true do
     validates :name, :place, :info
     validates :purpose_id, :year_id, :month_id, :day_id, :day_of_week_id, :event_time_id, numericality: { other_than: 0 }
