@@ -1,6 +1,6 @@
 class Country < ActiveHash::Base
   self.data = [
-      {id: 0, name: '-- country name --'}, {id: 1, name: 'Afghanistan'}, {id: 2, name: 'Albania'},
+      {id: 0, name: ' country name ? '}, {id: 1, name: 'Afghanistan'}, {id: 2, name: 'Albania'},
       {id: 3, name: 'Algeria'}, {id: 4, name: 'Andorra'}, {id: 5, name: 'Angola'},
       {id: 6, name: 'Antigua and Barbuda'}, {id: 7, name: 'Argentina'}, {id: 8, name: 'Armenia'},
       {id: 9, name: 'Australia'}, {id: 10, name: 'Austria'}, {id: 11, name: 'Azerbaijan'},
