@@ -22,10 +22,8 @@
 
 .signup-info {
   position: absolute;
-  top: calc(50% - 350px);
-  left: calc(70% - 20px);
-  height: 400px;
-  width: 380px;
+  top: 70px;
+  right: 150px;
 }
 
 .form-group {
