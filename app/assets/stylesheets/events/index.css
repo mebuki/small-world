@@ -1,31 +1,61 @@
 .events-main{
-  background-color:#99CCFF;
+  width: 100vw;
+  background-color: rgba(236, 233, 233, 0.603);
+}
+
+.events-img {
   height: 100vh;
   width: 100vw;
+  background-image: url(../road-trip.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-p{
-  text-align: center;
+.events-title {
+  font-size: 9vh;
+  font-family: fantasy;
+  font-weight: bolder;
+  padding: 30px 0 0 15px;
 }
 
-.new-event{
-  font-size: 20px;
+.side-bar {
+  width: 15vw;
+  border-left: thick solid;
+  padding-left: 30px;
+  margin: 50px 0 0 50px;
+  font-family: cursive;
+  font-weight: bolder;
 }
 
-.events{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 250px;
+.category {
+  margin-top: 30px;
+  font-size: 2.7vh;
 }
 
-.events-l{
+.events {
+  margin: 20px 0 0 5px;
+  font-size: 2.5vh;
 }
 
-.events-c{
+.events:hover {
+  color: #6495ED;
 }
 
-.events-h{
+.events-other {
+  margin-top: 30px;
+  font-size: 2.5vh;
 }
 
-.events-o{
+.events-other:hover {
+  color: #66CDAA;
+}
+
+.user {
+  font-size: 2.5vh;
+  margin-top: 30px;
+}
+
+.user:hover {
+  color: #6A5ACD;
 }
