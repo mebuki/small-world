@@ -1,7 +1,7 @@
 <div class= "signup">
-  <h3 class= "registration-title">Who are YOU ?</h3>
+  <h3 class= "registration-title">Who am <%= current_user.nickname %>?</h3>
   <div class= "signup-info">
-    <%= form_with model: @user, url: user_registration_path, class: "registration", local: true do |f| %>
+    <%= form_with model: current_user, class: "registration", method: :patch, local: true do |f| %>
       <div class="form-group">
         <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"nickname", maxlength:"20" %>
       </div>
@@ -25,5 +25,5 @@
       </div>
     <% end %>
   </div>
-  <%= link_to "Back", root_path, class:"back-to-top" %>
+  <%= link_to "Back", user_path, class:"back-to-top" %>
 </div>

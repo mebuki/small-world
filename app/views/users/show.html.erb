@@ -1,21 +1,63 @@
-<% @users.each do |user| %>
-  <% if current_user.id == user.id %>
-  <ul class="users">
-    <li class="user">
-      <p><span>name: </span><%= user.nickname %></p>
-      <p><span>email: </span><%= user.email %></p>
-        <% if @events.present? %>
-          <% @events.each do |event| %>
-            <p><span>主宰イベント: </span><%=link_to event.name, event_path(event.id) %></p>
-          <% end %>
-        <% end %>
+<div class= "user-show">
 
-        <% if @like_events.present? %>
-          <% @like_events.each do |event| %>
-            <p><span>参加イベント: </span><%=link_to event.name, event_path(event.id) %></p>
-          <% end %>
+ <div class= "show-title">It's a small world</div>
+
+  <div class= "events-scroll">
+    <div class= "user-events">
+      <% if @events.present? %>
+        <% @events.each do |event| %>
+          <div class= "user-event">
+            <%= link_to event_path(event.id) do%>
+              <div class= "user-event-name">
+                <%= event.name %>
+              </div>
+              <div class= "user-event-time">
+                <%= event.month.name %> <%= event.day.name %>th <%= event.year.name %>
+              </div>
+              <div class= "user-event-liked">
+                <%= event.likes.count %> people
+              </div>
+            <% end %>
+          </div>
         <% end %>
-    </li>
-  </ul>
-  <% end %>
-<% end %>
+      <% end %>
+    </div>
+
+    <div class= "user-events">
+      <% if @like_events.present? %>
+        <% @like_events.each do |event| %>
+          <div class= "user-event">
+            <%= link_to event_path(event.id) do%>
+              <div class= "user-event-name">
+                <%= event.name %>
+              </div>
+              <div class= "user-event-time">
+                <%= event.month.name %> <%= event.day.name %>th <%= event.year.name %>
+              </div>
+              <div class= "user-event-liked">
+                <%= event.likes.count %> people
+              </div>
+            <% end %>  
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class= "user-show-info">
+    <div class= "user-name">
+      <% @users.each do |user| %>
+        <% if current_user.id == user.id %>
+          <%= user.nickname %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class= "edit-user">
+      <%= link_to "EDIT", edit_user_path(current_user) %>
+    </div>
+    <div class= "back-to-event">
+      <%= link_to "BACK", events_path %>
+    </div>
+  </div>
+
+</div>

@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 
-  <div class="events-main">
+<div class= "events-main">
+  <div class= "side-bar">
     <p><%=link_to "新規イベント", new_event_path, class:"new-event" %></p>
     <p><%=link_to "検索", events_search_path, class:"search-event" %></p>
     <P><%=link_to "memory", tweets_path, class:"#" %></p>
@@ -35,6 +36,4 @@
         </div>
       </div>
     </div>
-  </div>
-
-<%= render "shared/footer"%>
+</div>

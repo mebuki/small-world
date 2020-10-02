@@ -1,28 +1,93 @@
-.registration{
+.signup {
+  background-image: url(../airport.jpg);
   height: 100vh;
   width: 100vw;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  position: relative;
 }
 
-.form-text-wrap {
-  height: 20%;
-  width: 100%;
+.registration-title {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  height: 50px;
+  width: 500px;
+  background-color: #e4e4d0d8;
+  text-align: center;
+  font-size: 40px;
+  font-family: fantasy;
 }
 
-.form-text{
-  font-size: 15px;
+.signup-info {
+  position: absolute;
+  top: 70px;
+  right: 150px;
+}
+
+.form-group {
+  margin-top: 40px;
 }
 
 .input-default {
   height: 40px;
   width: 300px;
-  margin-top: 5px;
-  padding: 10px 0px 8px;
-  border: 1px solid #ccc;
-  background: #fff;
+  padding: 5px;
+  background: whitesmoke;
   font-size: 15px;
-  resize: none;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
+
+.input-default-hash {
+  height: 50px;
+  width: 310px;
+  padding: 5px;
+  background: whitesmoke;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
+
+.register-btn {
+  margin-top: 40px;
+}
+
+.register-botton {
+  height: 50px;
+  width: 310px;
+  padding: 5px;
+  background: #99FFCC;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
+
+.register-botton:hover {
+  box-shadow: none;
+  color: white;
+  background: #99CCFF;
+  font-weight: bolder;
+}
+
+.back-to-top {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  height: 30px;
+  width: 80px;
+  background: #D3D3D3;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
+
+.back-to-top:hover {
+  box-shadow: none;
+  color: white;
+  background: #99CCFF;
+  font-weight: bolder;
 }
