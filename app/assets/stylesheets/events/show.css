@@ -1,18 +1,83 @@
-.event-show{
-  background-color: #99CCFF;
+.event-show {
   height: 100vh;
   width: 100vw;
-}
-
-.show-time{
+  background: rgba(255, 255, 255, 0.952);
   display: flex;
 }
 
-.show-month{
-  margin-right: 8px;
+.show-sidebar {
+  background: #99CCFF;
+  width: 24vw;
 }
 
-.show-day{
+.show-main {
+  height: 550px;
+  width: 800px;
+  background: rgba(128, 128, 128, 0.473);
+  box-shadow: 8px 8px 5px #666666;
+  margin: 200px 0 0 130px;
+  overflow: scroll;
+}
+
+.event-show-info {
+  font-family: monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.show-name {
+  font-size: 35px;
+}
+
+.show-time {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.show-month {
   margin-right: 10px;
 }
 
+.show-day {
+  margin-right: 10px;
+}
+
+.show-place {
+  font-size: 20px;
+}
+
+.show-image {
+  height: 400px;
+  width: 650px;
+  margin: 20px auto;
+}
+
+.show-info {
+  height: 300px;
+  width: 650px;
+  background: rgba(255, 255, 255, 0.733);
+  font-size: 20px;
+  word-break : break-all;
+  overflow: scroll;
+  padding: 5px 20px;
+  margin: 20px auto;
+}
+
+.edit-delete {
+  font-size: 15px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-delete-btn {
+  width: 80px;
+  color: #666666;
+  border: 1px solid grey;
+}
+
+.edit-delete-btn:hover {
+  color: #99CCFF;
+  background: rgba(0, 0, 0, 0.747);
+}
