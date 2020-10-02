@@ -1,35 +1,91 @@
-<%= render "shared/header" %>
-
 <div class="event-category">
-  <div class="titles">おでかけ / Hang Out
-  </div>
-  <% @events.where("purpose_id = 3").each do |event| %>
-  <ul class="events-list">
-    <li class="lists">
-    <%=link_to event_path(event.id) do %>
-      <div class="list-name">
-        E v e n t : <%=event.name%>
-      </div>
-    <% end %>
-      <div class="list-time">
-        <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
-      </div>
-    <div class="like">
-    <% if user_signed_in? %>
-      <% if event.liked_by?(current_user) %>
-        <%=link_to '参加しない', event_likes_path(event.id), method: :delete %>
-        <span>参加数：</span><%= event.likes.count %>
-      <% else %>
-        <%=link_to '参加する', event_likes_path(event.id), method: :post %>
-        <span>参加数：</span><%= event.likes.count %>
-      <% end %>
-    <% else %>
-      <span>参加数：</span><%= event.likes.count %>
-    <% end %>
-    </div>
-    </li>
-  </ul>
-  <% end %>
-</div>
+  <div class= "hangout-img">
 
-<%= render "shared/footer"%>
+    <div class= "side">
+      <div class= "events-title">
+        <%=link_to "It's a small world", events_path %> 
+      </div>
+      <div class= "side-bar">
+        <div class= "category">
+          Category of Events
+        </div>
+        <div class="events">
+          # <%=link_to "language", language_events_path %>
+        </div>
+        <div class="events">
+          # <%=link_to "culuture", culture_events_path %>
+        </div>
+        <div class="events">
+          # <%=link_to "hangout", hangout_events_path %>
+        </div>
+        <div class="events">
+          # <%=link_to "others", others_events_path %>
+        </div>
+        <div class= "events-other">
+          <%=link_to "Create Events", new_event_path %>
+        </div>
+        <div class= "events-other">
+          <%=link_to "search", events_search_path %>
+        </div>
+        <div class= "events-other">
+          <%=link_to "memories", tweets_path %>
+        </div>
+        <% if user_signed_in? %>
+          <div class= "user">
+            <%=link_to "about me", user_path(:id) %>
+          </div>
+          <div class= "user">
+            <%=link_to "bye", destroy_user_session_path, method: :delete %>
+          </div>
+        <% else %>
+          <div class= "user">
+            <%=link_to "join", new_user_registration_path %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class= "main-events">
+      <% @events.where("purpose_id = 3").each do |event| %>
+      <ul class= "events-list">
+        <li class= "lists">
+          <%=link_to event_path(event.id) do %>
+            <div class= "list-name">
+              <%= event.name %>
+            </div>
+            <div class= "list-time">
+              <%= event.month.name %> <%= event.day.name %>th  <%= event.year.name %>
+            </div>
+          <% end %>
+          <div class="like">
+            <% if user_signed_in? %>
+              <% if event.liked_by?(current_user) %>
+                <div class= "like-event">
+                  <%=link_to 'not JOIN', event_likes_path(event.id), method: :delete %>
+                </div>
+                <div class= "like-count">
+                  <%= event.likes.count %> people
+                </div>
+              <% else %>
+                <div class= "like-event">
+                  <%=link_to 'JOIN', event_likes_path(event.id), method: :post %>
+                </div>
+                <div class= "like-count">
+                  <%= event.likes.count %> people
+                </div>
+              <% end %>
+            <% else %>
+              <div class= "like-count">
+                <%= event.likes.count %> people
+              </div>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+      <% end %>
+    </div>
+
+  <div class= "category-name">HANG OUT</div>
+
+  </div>
+</div>
