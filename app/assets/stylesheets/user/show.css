@@ -4,6 +4,7 @@
   width: 100vw;
   background-size: contain;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .show-title {
@@ -11,8 +12,9 @@
   font-size: 40px;
   font-family: cursive;
   text-decoration: underline;
-  padding-top: 30px;
-  margin-left: 78%;
+  position: absolute;
+  top: 2vh;
+  right: 3vw;
 }
 
 .events-scroll {
@@ -24,7 +26,7 @@
   height: 160px;
   width: 63vw;
   background: rgba(253, 253, 252, 0.603);
-  margin: 0 0 30px 65px;
+  margin: 40px 0 0 65px;
   overflow: scroll;
   white-space: nowrap;
 }
