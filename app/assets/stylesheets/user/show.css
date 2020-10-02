@@ -1,0 +1,103 @@
+.user-show {
+  background-image: url(../bike.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.show-title {
+  transform: skewY(6deg);
+  font-size: 40px;
+  font-family: cursive;
+  text-decoration: underline;
+  padding-top: 30px;
+  margin-left: 78%;
+}
+
+.events-scroll {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-events {
+  height: 160px;
+  width: 63vw;
+  background: rgba(253, 253, 252, 0.603);
+  margin: 0 0 30px 65px;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.user-event {
+  height: 120px;
+  width: 180px;
+  background: rgba(196, 159, 159, 0.425);
+  margin: 0 20px;
+  margin-top: 18px;
+  font-size: 15px;
+  font-family: monospace;
+  display: inline-block;
+  overflow: scroll;
+}
+
+.user-event-name {
+  font-size: 18px;
+  margin: 10px 0 0 15px;
+}
+
+.user-event-time {
+  margin: 10px 0 0 20px;
+}
+
+.user-event-liked {
+  margin: 10px 0 0 100px;
+}
+
+
+.user-event:hover {
+  color: white;
+  background: grey;
+}
+
+.user-show-info {
+  height: 260px;
+  width: 230px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 80%;
+}
+
+.user-name {
+  font-size: 38px;
+  font-family: serif;
+}
+
+.edit-user {
+  height: 35px;
+  width: 70px;
+  font-size: 20px;
+  font-family: serif;
+  text-align: center;
+}
+
+.edit-user:hover {
+  color: white;
+  background: black;
+}
+
+.back-to-event {
+  height: 35px;
+  width: 70px;
+  font-size: 20px;
+  font-family: serif;
+  text-align: center;
+}
+
+.back-to-event:hover {
+  color: white;
+  background: black;
+}
