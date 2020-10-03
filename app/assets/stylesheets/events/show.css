@@ -1,19 +1,19 @@
 .event-show {
   height: 100vh;
   width: 100vw;
-  background: rgba(255, 255, 255, 0.952);
+  background: #99CCFF;
   display: flex;
 }
 
 .show-sidebar {
-  background: #99CCFF;
+  background: white;
   width: 24vw;
 }
 
 .show-main {
   height: 550px;
   width: 800px;
-  background: rgba(128, 128, 128, 0.473);
+  background: rgba(128, 128, 128, 0.267);
   box-shadow: 8px 8px 5px #666666;
   margin: 200px 0 0 130px;
   overflow: scroll;
