@@ -17,7 +17,8 @@
   margin: 30px 0 15px 780px;
   font-size: 40px;
   font-family: fantasy;
-  text-shadow: 2px 2px 1px #666;
+  font-weight: bolder;
+  text-shadow: 4px 4px 2px #666;
   background: linear-gradient(transparent 50%, rgba(121, 119, 119, 0.9) 95%); 
 }
 

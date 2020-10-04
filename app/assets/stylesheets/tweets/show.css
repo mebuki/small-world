@@ -1,0 +1,136 @@
+.tweet-show {
+  width: 100vw;
+  background-color: rgba(236, 233, 233, 0.603);
+  display: flex;
+  position: relative;
+}
+
+.tweet-index-img {
+  overflow: scroll;
+}
+
+.tweet-show-title {
+  position: absolute;
+  margin: 30px 0 15px 780px;
+  font-size: 40px;
+  font-family: fantasy;
+  font-weight: bolder;
+  text-shadow: 4px 4px 2px #666;
+  background: linear-gradient(transparent 50%, rgba(121, 119, 119, 0.9) 95%);
+}
+
+.tweet-show-main {
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: fantasy;
+  margin-top: 150px;
+}
+
+.tweet-show-info {
+  height: 300px;
+  width: 450px;
+  margin-left: 20px;
+}
+
+.tweet-show-image {
+  height: 300px;
+  width: 450px;
+}
+
+.show-edit-destroy {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.show-edit:hover {
+  color: white;
+}
+
+.show-delete:hover {
+  color: white;
+}
+
+.tweet-show-info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.719);
+  padding: 10px;
+}
+
+.show-title {
+  height: 30px;
+  width: 280px;
+  font-size: 20px;
+  border-bottom: solid 1px black;
+  margin-bottom: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.show-text {
+  height: 225px;
+  width: 400px;
+  font-size: 18px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.tweet-review {
+  background: rgba(102, 102, 102, 0.623);
+  width: 950px;
+  margin: 0 auto;
+}
+
+.review-main {
+  display: flex;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+.review-text {
+  height: 30px;
+  width: 300px;
+  font-size: 20px;
+  background: rgb(243, 241, 241);
+  resize: none;
+  border: none;
+  margin-right: 10px;
+}
+
+.review-btn {
+  height: 33px;
+  width: 60px;
+  background: #FF9999	;
+}
+
+.review-btn:hover {
+  color: aliceblue;
+  background: grey;
+}
+
+.reviews {
+  width: 900px;
+  margin: 20px auto;
+  overflow: scroll;
+}
+
+.re-review {
+  display: flex;
+  font-family: fantasy;
+}
+
+.re-review-user {
+  width: 50px;
+  font-size: 23px;
+  margin-right: 30px;
+}
+
+.re-review-text {
+  font-size: 20px;
+}

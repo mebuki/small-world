@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.show-title {
+.user-show-title {
   transform: skewY(8deg);
   font-size: 75px;
   font-family: cursive;

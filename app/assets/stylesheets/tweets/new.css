@@ -4,15 +4,6 @@
   display: flex;
 }
 
-.tweet-new-img {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(../wall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
 .tweet-new-title {
   margin: 80px 0 15px 540px;
   font-size: 60px;
