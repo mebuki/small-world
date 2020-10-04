@@ -1,62 +1,67 @@
 <div class= "user-show">
 
- <div class= "show-title">My Lists</div>
-
-  <div class= "events-scroll">
-    <div class= "user-events">
-      <% if @events.present? %>
-        <% @events.each do |event| %>
-          <div class= "user-event">
-            <%= link_to event_path(event.id) do%>
-              <div class= "user-event-name">
-                <%= event.name %>
-              </div>
-              <div class= "user-event-time">
-                <%= event.month.name %> <%= event.day.name %>th <%= event.year.name %>
-              </div>
-              <div class= "user-event-liked">
-                <%= event.likes.count %> people
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-
-    <div class= "user-events">
-      <% if @like_events.present? %>
-        <% @like_events.each do |event| %>
-          <div class= "user-event">
-            <%= link_to event_path(event.id) do%>
-              <div class= "user-event-name">
-                <%= event.name %>
-              </div>
-              <div class= "user-event-time">
-                <%= event.month.name %> <%= event.day.name %>th <%= event.year.name %>
-              </div>
-              <div class= "user-event-liked">
-                <%= event.likes.count %> people
-              </div>
-            <% end %>  
-          </div>
-        <% end %>
-      <% end %>
-    </div>
+  <div class= "user-show-title">This is ME
   </div>
 
-  <div class= "user-show-info">
-    <div class= "user-name">
-      <% @users.each do |user| %>
-        <% if current_user.id == user.id %>
-          <%= user.nickname %>
+  <div class= "user-show-main">
+    <div class= "user-show-info">
+      <div class= "user-name">
+        <% @users.each do |user| %>
+          <% if current_user.id == user.id %>
+            <%= user.nickname %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+      <div class= "edit-user">
+        <%= link_to "EDIT", edit_user_path(current_user) %>
+      </div>
+      <div class= "back-to-event">
+        <%= link_to "BACK", events_path %>
+      </div>
     </div>
-    <div class= "edit-user">
-      <%= link_to "EDIT", edit_user_path(current_user) %>
-    </div>
-    <div class= "back-to-event">
-      <%= link_to "BACK", events_path %>
+
+    <div class= "user-show-img">
+      <div class= "events-scroll">
+        <div class= "user-events">
+          <% if @events.present? %>
+            <% @events.each do |event| %>
+              <div class= "user-event">
+                <%= link_to event_path(event.id) do%>
+                  <div class= "user-event-name">
+                    <%= event.name %>
+                  </div>
+                  <div class= "user-event-time">
+                    <%= event.month.name %> <%= event.day.name %>th <%= event.year.name %>
+                  </div>
+                  <div class= "user-event-liked">
+                    <%= event.likes.count %> people
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class= "user-events">
+          <% if @like_events.present? %>
+            <% @like_events.each do |event| %>
+              <div class= "user-event">
+                <%= link_to event_path(event.id) do%>
+                  <div class= "user-event-name">
+                    <%= event.name %>
+                  </div>
+                  <div class= "user-event-time">
+                    <%= event.month.name %> <%= event.day.name %>th <%= event.year.name %>
+                  </div>
+                  <div class= "user-event-liked">
+                    <%= event.likes.count %> people
+                  </div>
+                <% end %>  
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 

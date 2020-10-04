@@ -6,5 +6,6 @@ class Tweet < ApplicationRecord
 
   with_options presence: true do
     validates :image, :text
+    validates :title, length: { maximum: 10 } 
   end
 end

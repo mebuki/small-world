@@ -1,76 +1,32 @@
 .user-show {
-  background-image: url(../bike.jpg);
-  height: 100vh;
   width: 100vw;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: rgba(236, 233, 233, 0.603);
   position: relative;
 }
 
-.show-title {
-  transform: skewY(8deg);
-  font-size: 75px;
-  font-family: cursive;
-  text-decoration: underline;
+.user-show-title {
+  transform: skewY(-6deg);
+  font-size: 80px;
+  font-weight: bolder;
+  font-family: fantasy;
   position: absolute;
-  top: 2vh;
-  right: 3vw;
+  top: 8vh;
+  left: 1vw;
 }
 
-.events-scroll {
+.user-show-main {
   display: flex;
-  flex-direction: column;
-}
-
-.user-events {
-  height: 160px;
-  width: 63vw;
-  background: rgba(253, 253, 252, 0.603);
-  margin: 40px 0 0 65px;
-  overflow: scroll;
-  white-space: nowrap;
-}
-
-.user-event {
-  height: 120px;
-  width: 180px;
-  background: rgba(196, 159, 159, 0.425);
-  margin: 0 20px;
-  margin-top: 18px;
-  font-size: 15px;
-  font-family: monospace;
-  display: inline-block;
-  overflow: scroll;
-}
-
-.user-event-name {
-  font-size: 18px;
-  margin: 10px 0 0 15px;
-}
-
-.user-event-time {
-  margin: 10px 0 0 20px;
-}
-
-.user-event-liked {
-  margin: 10px 0 0 100px;
-}
-
-
-.user-event:hover {
-  color: white;
-  background: grey;
 }
 
 .user-show-info {
   height: 260px;
-  width: 230px;
+  width: 280px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-left: 80%;
+  margin: auto 60px;
 }
 
 .user-name {
@@ -103,3 +59,58 @@
   color: white;
   background: black;
 }
+
+.user-show-img {
+  background-image: url(../girl.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.events-scroll {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-events {
+  height: 160px;
+  width: 63vw;
+  background: rgba(58, 58, 56, 0.932);
+  margin: 40px 0 0 65px;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.user-event {
+  height: 120px;
+  width: 180px;
+  background: rgba(245, 230, 230, 0.425);
+  margin: 0 20px;
+  margin-top: 18px;
+  font-size: 15px;
+  font-family: monospace;
+  display: inline-block;
+  overflow: scroll;
+}
+
+.user-event-name {
+  font-size: 18px;
+  margin: 10px 0 0 15px;
+}
+
+.user-event-time {
+  margin: 10px 0 0 20px;
+}
+
+.user-event-liked {
+  margin: 10px 0 0 100px;
+}
+
+
+.user-event:hover {
+  color: white;
+  background: grey;
+}
+

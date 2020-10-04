@@ -9,6 +9,7 @@ class Event < ApplicationRecord
 
   belongs_to :user
   has_many :likes
+  has_one_attached :image
 
   # has_many :comments
 
@@ -17,7 +18,7 @@ class Event < ApplicationRecord
   end
 
   with_options presence: true do
-    validates :name, :place, :info
+    validates :name, :place, :info, :image
     validates :purpose_id, :year_id, :month_id, :day_id, :day_of_week_id, :event_time_id, numericality: { other_than: 0 }
   end
 end

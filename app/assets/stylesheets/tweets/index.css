@@ -1,4 +1,55 @@
-.tweet-img {
-  width: 10vh;
-  height: 10vh;
+.tweet-main {
+  width: 100vw;
+  background-color: rgba(255, 250, 250, 0.603);
+  display: flex;
+}
+
+.tweet-index-img {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../wall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.tweet-index {
+  margin: 30px 0 15px 780px;
+  font-size: 40px;
+  font-family: fantasy;
+  font-weight: bolder;
+  text-shadow: 4px 4px 2px #666;
+  background: linear-gradient(transparent 50%, rgba(121, 119, 119, 0.9) 95%); 
+}
+
+.tweet-index:hover {
+  color: white;
+}
+
+.tweets-infos {
+  height: 550px;
+  width: 1050px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: scroll;
+}
+
+.tweets {
+  height: 220px;
+  width: 250px;
+  margin: 10px;
+  background:rgba(255, 255, 255, 0.877);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweet-title {
+  margin-top: 10px;
+  text-align: center;
+  font-family: cursive;
+  color: #666;
+  overflow: scroll;
 }
