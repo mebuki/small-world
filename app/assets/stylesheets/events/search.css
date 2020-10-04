@@ -1,5 +1,160 @@
-.search{
-  background-color: #99CCFF;
+.event-search {
+  width: 100vw;
+  background-color: rgba(236, 233, 233, 0.603);
+  position: relative;
+  display: flex;
+}
+
+.search-img {
   height: 100vh;
   width: 100vw;
+  background-image: url(../photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.search {
+  height: 630px;
+  width: 1000px;
+  background: rgba(0, 0, 0, 0.527);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; 
+  position: absolute;
+  top: 150px;
+  left: 400px;
+}
+
+.search-events {
+  height: 180px;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.37);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  left: 450px;
+}
+
+#q_purpose_id_eq{
+  height: 40px;
+  width: 421px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-bottom: 5px;
+  color: white;
+  background: black;
+}
+
+#q_month_id_eq {
+  height: 40px;
+  width: 80px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-bottom: 5px;
+  color: white;
+  background: black;
+}
+
+#q_day_id_eq {
+  height: 40px;
+  width: 60px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-bottom: 5px;
+  color: white;
+  background: black;
+}
+
+#q_year_id_eq {
+  height: 40px;
+  width: 80px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-bottom: 5px;
+  color: white;
+  background: black;
+}
+
+#q_day_of_week_id_eq {
+  height: 40px;
+  width: 90px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-bottom: 5px;
+  color: white;
+  background: black;
+}
+
+#q_event_time_id_eq {
+  height: 40px;
+  width: 90px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-bottom: 5px;
+  color: white;
+  background: black;
+}
+
+.search-btn {
+  height: 40px;
+  width: 421px;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: cursive;
+  color: black;
+  background: white;
+}
+
+.search-btn:hover {
+  color: black;
+  background: gray;
+}
+
+.search-results {
+  height: 350px;
+  width: 930px;
+  position: absolute;
+  top: 250px;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.results-list {
+  height: 130px;
+  width: 180px;
+  background: rgba(255, 255, 255, 0.671);
+  margin: 10px;
+  font-size: 18px;
+  font-family: cursive;
+  text-align: right;
+  padding: 15px;
+}
+
+.results-list:hover {
+  color: white;
+  background: rgba(255, 71, 80, 0.658);
+}
+
+.results-no-list {
+  height: 85px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.671);
+  margin: 50px;
+  font-size: 30px;
+  font-family: cursive;
+  text-align: center;
+  text-justify: center;
+  padding: 15px;
 }

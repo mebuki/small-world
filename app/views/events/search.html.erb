@@ -1,39 +1,54 @@
-<%= render "shared/header" %>
+<div class= "event-search">
+  
+  <%= render "shared/sidebar" %>
 
-<div class="search">
-  <%= search_form_for @e, url: events_search_path do |f| %>
-    <%= f.label :purpose_id_eq, "カテゴリー" %>
-    <%= f.collection_select :purpose_id_eq, Purpose.all, :id, :name, include_blank: '指定なし' %>
-    <br>
-    <%= f.label "event time" %>
-    <%= f.collection_select :month_id_eq, Month.all, :id, :name, include_blank: '指定なし' %>
-    <%= f.collection_select :day_id_eq, Day.all, :id, :name, include_blank: '指定なし' %>
-    <%= f.collection_select :year_id_eq, Year.all, :id, :name, include_blank: '指定なし' %>
-    <%= f.collection_select :day_of_week_id_eq, DayOfWeek.all, :id, :name, include_blank: '指定なし' %>
-    <%= f.collection_select :event_time_id_eq, EventTime.all, :id, :name, include_blank: '指定なし' %>
-    <br>
-    <%= f.submit "検索" %>
-  <% end %>
-  <br>
-  <% if @results.length !=0 %>
-    <% @results.each do |result| %>
-    <br>
-    <li>
-    <%= link_to event_path(result.id) do %>
-      <%= result.name %>
-      <%= result.month.name %>
-      <%= result.day.name %>
-      <%= result.year.name %>
-      <%= result.day_of_week.name %>
-      <%= result.event_time.name %>
-    <% end %>
-    </li>
-    <% end %>
-  <% else %>
-     no event
-  <% end %>
-  <br>
-  <%= link_to "トップに戻る", events_path %>
+  <div class= "search-img">
+    <div class= "search">
+      <div class= "search-events">
+        <%= search_form_for @e, url: events_search_path do |f| %>
+          <div class= "search-category">
+            <%= f.collection_select :purpose_id_eq, Purpose.all, :id, :name, include_blank: 'Category' %>
+          </div>
+          <div class= "search-time">
+            <%= f.collection_select :month_id_eq, Month.all, :id, :name, include_blank: 'Month' %>
+            <%= f.collection_select :day_id_eq, Day.all, :id, :name, include_blank: 'Day' %>
+            <%= f.collection_select :year_id_eq, Year.all, :id, :name,  include_blank: 'Year' %>
+            <%= f.collection_select :day_of_week_id_eq, DayOfWeek.all, :id, :name, include_blank: 'Day of Week' %>
+            <%= f.collection_select :event_time_id_eq, EventTime.all, :id, :name, include_blank: 'Time' %>
+          </div>
+          <div class= "search-botton">
+            <%= f.submit "S E A R C H", class: "search-btn" %>
+          </div>
+        <% end %>
+      </div>
+      
+      <div class= "search-results">
+        <% if @results.length !=0 %>
+          <% @results.each do |result| %>
+            <ul class= "results">
+              <%= link_to event_path(result.id) do %>
+              <li>
+                <div class= "results-list">
+                  <%= result.name %>
+                  <br><br>
+                  <%= result.month.name %>
+                  <%= result.day.name %>th
+                  <%= result.year.name %>
+                  <br>
+                  <%= result.day_of_week.name %>
+                  <%= result.event_time.name %>
+                <div>
+              </li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% else %>
+          <div class= "results-no-list">
+            <p>there aren't EVENTS</p>
+            <p>Do something!!</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= render "shared/footer"%>

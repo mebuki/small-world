@@ -1,40 +1,43 @@
-<div class= "events-title">It's a small world 
-</div>
-<div class= "side-bar">
-  <div class= "category">
-    Category of Events
+<div class= "side">
+  <div class= "events-title">
+    <%=link_to "It's a small world", events_path %> 
   </div>
-  <div class="events">
-    # <%=link_to "language", language_events_path %>
-  </div>
-  <div class="events">
-    # <%=link_to "culuture", culture_events_path %>
-  </div>
-  <div class="events">
-    # <%=link_to "hangout", hangout_events_path %>
-  </div>
-  <div class="events">
-    # <%=link_to "others", others_events_path %>
-  </div>
-  <div class= "events-other">
-    <%=link_to "Create Events", new_event_path %>
-  </div>
-  <div class= "events-other">
-    <%=link_to "search", events_search_path %>
-  </div>
-  <div class= "events-other">
-    <%=link_to "memories", tweets_path %>
-  </div>
-  <% if user_signed_in? %>
-    <div class= "user">
-      <%=link_to "about me", user_path(:id) %>
+  <div class= "side-bar">
+    <div class= "category">
+      Category of Events
     </div>
-    <div class= "user">
-      <%=link_to "bye", destroy_user_session_path, method: :delete %>
+    <div class="events">
+      # <%=link_to "language", language_events_path %>
     </div>
-  <% else %>
-    <div class= "user">
-      <%=link_to "join", new_user_registration_path %>
+    <div class="events">
+      # <%=link_to "culuture", culture_events_path %>
     </div>
-  <% end %>
+    <div class="events">
+      # <%=link_to "hangout", hangout_events_path %>
+    </div>
+    <div class="events">
+      # <%=link_to "others", others_events_path %>
+    </div>
+    <div class= "events-other">
+      <%=link_to "Create Events", new_event_path %>
+    </div>
+    <div class= "events-other">
+      <%=link_to "search", events_search_path %>
+    </div>
+    <div class= "events-other">
+      <%=link_to "memories", tweets_path %>
+    </div>
+    <% if user_signed_in? %>
+      <div class= "user">
+        <%=link_to "about me", user_path(:id) %>
+      </div>
+      <div class= "user">
+        <%=link_to "bye", destroy_user_session_path, method: :delete %>
+      </div>
+    <% else %>
+      <div class= "user">
+        <%=link_to "join", new_user_registration_path %>
+      </div>
+    <% end %>
+  </div>
 </div>
