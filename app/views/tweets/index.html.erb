@@ -1,13 +1,25 @@
-<%= render "shared/header" %>
+<div class= "tweet-main">
 
-<%=link_to "新規ツイート", new_tweet_path %>
-<% @tweets.each do |tweet| %>
-  <div class="tweets">
-  <%=link_to tweet_path(tweet.id) do %>
-    <%= image_tag tweet.image, class:"tweet-img" %>
-    <%= tweet.text %>
-  <% end %>
+  <%= render "shared/sidebar" %>
+
+  <div class= "tweet-index-img">
+    <div class= "tweet-new">
+      <%=link_to "how was event?", new_tweet_path %>
+    </div>
+    <div class= "tweets-infos">
+      <% @tweets.each do |tweet| %>
+        <div class="tweets">
+          <%=link_to tweet_path(tweet.id) do %>
+            <div class= "tweet-img">
+              <%= image_tag tweet.image, size: "220x160" %>
+            </div>
+            <div class= "tweet-text">
+              <%= tweet.text %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
- 
-<%= render "shared/footer"%>
+
+</div>
