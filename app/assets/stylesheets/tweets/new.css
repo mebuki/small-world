@@ -1,0 +1,81 @@
+.tweet-new {
+  width: 100vw;
+  background-color: rgba(236, 233, 233, 0.603);
+  display: flex;
+}
+
+.tweet-new-img {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../wall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.tweet-new-title {
+  margin: 80px 0 15px 540px;
+  font-size: 60px;
+  font-family: fantasy;
+  font-weight: bolder;
+  color: #ff97c2b6;
+  text-shadow: 4px 4px 2px rgb(90, 87, 87);
+  display: inline-block;
+  transform: skewY(10deg); 
+}
+
+.tweet-new-info {
+  height: 480px;
+  width: 700px;
+  background: rgba(255, 255, 255, 0.322);
+  margin: 20px 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.new-image {
+  height: 200px;
+  margin: 0 auto 10px;
+}
+
+.new-title {
+  height: 40px;
+  width: 400px;
+  font-size: 15px;
+  font-family: fantasy;
+  text-align: center;
+  margin: 0 auto 15px;
+  border: none;
+  resize: none;
+}
+
+.new-text {
+  height: 170px;
+  width: 600px;
+  font-size: 15px;
+  font-family: fantasy;
+  text-align: center;
+  margin: 0 auto 10px;
+  border: none;
+  overflow: scroll;
+  resize: none;
+}
+
+.new-btn {
+  height: 40px;
+  width: 600px;
+  background: azure;
+  font-size: 20px;
+  font-family: cursive;
+  margin: 0 auto;
+  border: none;
+}
+
+.new-btn:hover {
+  font-weight: bolder;
+  color: white;
+  background: rgba(0, 0, 0, 0.411);
+}

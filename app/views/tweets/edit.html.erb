@@ -1,9 +1,26 @@
-<%= render "shared/header" %>
+<div class= "tweet-new">
 
-<%= form_with model: @tweet, class:"tweet-information", method: :patch, local: true do |f| %>
-  <%= f.file_field :images, name: "tweet[images][]" %>
-  <%= f.text_field :text %>
-  <%= f.submit "送信" %>
-<% end %>
+  <%= render "shared/sidebar" %>
 
-<%= render "shared/footer"%>
+  <div class= "tweet-new-img">
+    <div class= "tweet-new-title">what's happening ?
+    </div>
+    <div class= "tweet-new-info">
+      <%= form_with model: @tweet, method: :patch, local: true do |f| %>
+        <div class= "new-image">
+          <%= f.file_field :image, class:"new-image" %>
+        </div>
+        <div class= "new-title">
+          <%= f.text_area :title, placeholder:"t i t l e", class: "new-title" %>
+        </div>
+        <div class= "new-text">
+          <%= f.text_area :text, placeholder:"t e x t", class: "new-text" %>
+        </div>
+        <div class= "new-btn">
+          <%= f.submit "S E N D", class:"new-btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

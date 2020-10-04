@@ -3,7 +3,7 @@
   <%= render "shared/sidebar" %>
 
   <div class= "tweet-index-img">
-    <div class= "tweet-new">
+    <div class= "tweet-index">
       <%=link_to "how was event?", new_tweet_path %>
     </div>
     <div class= "tweets-infos">
@@ -13,8 +13,8 @@
             <div class= "tweet-img">
               <%= image_tag tweet.image, size: "220x160" %>
             </div>
-            <div class= "tweet-text">
-              <%= tweet.text %>
+            <div class= "tweet-title">
+              <%= tweet.title %>
             </div>
           <% end %>
         </div>
