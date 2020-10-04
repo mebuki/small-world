@@ -1,31 +1,15 @@
 .events-main{
-  background-color:#99CCFF;
+  width: 100vw;
+  background-color: rgba(236, 233, 233, 0.603);
+  display: flex;
+}
+
+.events-img {
   height: 100vh;
   width: 100vw;
+  background-image: url(../road-trip.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-p{
-  text-align: center;
-}
-
-.new-event{
-  font-size: 20px;
-}
-
-.events{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 250px;
-}
-
-.events-l{
-}
-
-.events-c{
-}
-
-.events-h{
-}
-
-.events-o{
-}

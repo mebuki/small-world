@@ -8,8 +8,8 @@
 }
 
 .show-title {
-  transform: skewY(6deg);
-  font-size: 40px;
+  transform: skewY(8deg);
+  font-size: 75px;
   font-family: cursive;
   text-decoration: underline;
   position: absolute;

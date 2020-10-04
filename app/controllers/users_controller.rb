@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
 
+  def create
+    user = User.new(user_params)
+    if user.save
+      redirect_to events_path
+    end
+  end
+
   def show
     @users = User.all
     @events = current_user.events.order("created_at DESC")

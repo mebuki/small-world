@@ -1,35 +1,49 @@
-<%= render "shared/header" %>
-
 <div class="event-category">
-  <div class="titles">その他 / Others
-  </div>
-  <% @events.where("purpose_id = 4").each do |event| %>
-  <ul class="events-list">
-    <li class="lists">
-    <%=link_to event_path(event.id) do %>
-      <div class="list-name">
-        E v e n t : <%=event.name%>
-      </div>
-    <% end %>
-      <div class="list-time">
-        <%=event.month.name%> <%=event.day.name%>th  <%=event.year.name%>
-      </div>
-    <div class="like">
-    <% if user_signed_in? %>
-      <% if event.liked_by?(current_user) %>
-        <%=link_to '参加しない', event_likes_path(event.id), method: :delete %>
-        <span>参加数：</span><%= event.likes.count %>
-      <% else %>
-        <%=link_to '参加する', event_likes_path(event.id), method: :post %>
-        <span>参加数：</span><%= event.likes.count %>
-      <% end %>
-    <% else %>
-      <span>参加数：</span><%= event.likes.count %>
-    <% end %>
-    </div>
-    </li>
-  </ul>
-  <% end %>
-</div>
 
-<%= render "shared/footer"%>
+  <%= render "shared/sidebar"%>
+  
+  <div class= "others-img">
+    <div class= "main-events">
+      <% @events.where("purpose_id = 4").each do |event| %>
+      <ul class= "events-list">
+        <li class= "lists">
+          <%=link_to event_path(event.id) do %>
+            <div class= "list-name">
+              <%= event.name %>
+            </div>
+            <div class= "list-time">
+              <%= event.month.name %> <%= event.day.name %>th  <%= event.year.name %>
+            </div>
+          <% end %>
+          <div class="like">
+            <% if user_signed_in? %>
+              <% if event.liked_by?(current_user) %>
+                <div class= "like-event">
+                  <%=link_to 'not JOIN', event_likes_path(event.id), method: :delete %>
+                </div>
+                <div class= "like-count">
+                  <%= event.likes.count %> people
+                </div>
+              <% else %>
+                <div class= "like-event">
+                  <%=link_to 'JOIN', event_likes_path(event.id), method: :post %>
+                </div>
+                <div class= "like-count">
+                  <%= event.likes.count %> people
+                </div>
+              <% end %>
+            <% else %>
+              <div class= "like-count">
+                <%= event.likes.count %> people
+              </div>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+      <% end %>
+    </div>
+
+    <div class= "category-name">OTHERS</div>
+
+  </div>
+</div>
