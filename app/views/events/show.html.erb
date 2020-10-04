@@ -1,43 +1,45 @@
 <div class= "event-show">
 
-  <div class= "show-sidebar">
-    <%= render "shared/sidebar" %>
-  </div>
+  <%= render "shared/sidebar" %>
 
-  <div class= "show-main">
-    <div class= "event-show-info">
-      <div class= "show-name">
-        <%= @event.name %>
-      </div>
-      <div class= "show-time">
-        <div class= "show-month">
-          <%= @event.month.name %>
+  <div class= "events-img">
+    <div class= "show-main">
+      <div class= "event-show-info">
+        <div class= "show-name">
+          <%= @event.name %>
         </div>
-        <div class= "show-day">
-          <%= @event.day.name %>th
+        <div class= "show-time">
+          <div class= "show-month">
+            <%= @event.month.name %>
+          </div>
+          <div class= "show-day">
+            <%= @event.day.name %>th
+          </div>
+          <div class= "show-year">
+            <%= @event.year.name %>
+          </div>
         </div>
-        <div class= "show-year">
-          <%= @event.year.name %>
+        <div class= "show-place">
+          @ <%= @event.place %>
         </div>
-      </div>
-      <div class= "show-place">
-        @ <%= @event.place %>
-      </div>
-      <div class= "show-image">
-        <%# <%= @event.image %> 
-      </div>
-      <div class= "show-info">
-        <%= @event.info %>
-      </div>
-      <div class= "edit-delete">
-        <div class= "edit-delete-btn">
-          <%=link_to "edit", edit_event_path(@event.id), method: :get %>
+        <div class= "show-image">
+          <%=image_tag @event.image %>
         </div>
-        <div class= "edit-delete-btn">  
-          <%=link_to "delete", event_path, method: :delete %>
+        <div class= "show-info">
+          <%= @event.info %>
         </div>
+        <div class= "edit-delete">
+        <% if @event.user_id == current_user.id %>
+          <div class= "edit-delete-btn">
+            <%=link_to "edit", edit_event_path(@event.id), method: :get %>
+          </div>
+          <div class= "edit-delete-btn">  
+            <%=link_to "delete", event_path, method: :delete %>
+          </div>
+        <% end %>
+        </div>
+      <%# <%=link_to "質問する", new_event_comment_path(@event.id), method: :get, class: "event-comment" %> 
       </div>
-    <%# <%=link_to "質問する", new_event_comment_path(@event.id), method: :get, class: "event-comment" %> 
     </div>
   </div>
 

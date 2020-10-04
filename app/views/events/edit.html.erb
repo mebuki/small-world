@@ -9,6 +9,9 @@
         <div class= "new-event-title">what do you wanna do ?
         </div>
         <div class= "event-a">
+          <%= f.file_field :image, class: "input-image", id: "image" %>
+        </div>
+        <div class= "event-a">
           <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class: "input-id", id: "purpose"}) %>
         </div>
         <div class= "event-a">

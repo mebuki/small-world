@@ -1,5 +1,5 @@
 <div class= "signup">
-  <h3 class= "registration-title">Who am <%= current_user.nickname %>?</h3>
+  <h3 class= "registration-title">Who is <%= current_user.nickname %>?</h3>
   <div class= "signup-info">
     <%= form_with model: current_user, class: "registration", method: :patch, local: true do |f| %>
       <div class="form-group">
