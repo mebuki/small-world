@@ -20,6 +20,7 @@
   font-family: fantasy;
 }
 
+
 .signup-info {
   position: absolute;
   top: 70px;
@@ -27,7 +28,7 @@
 }
 
 .form-group {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .input-default {

@@ -7,6 +7,7 @@
     </div>
     <div class= "tweet-new-info">
       <%= form_with model: @tweet, local: true do |f| %>
+        <%= render "shared/error_messages", model: f.object, class: "errors" %>
         <div class= "new-image">
           <%= f.file_field :image, class:"new-image" %>
         </div>

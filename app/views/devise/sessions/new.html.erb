@@ -1,6 +1,6 @@
 <div class= "signin">
   <div class= "signin-info">
-    <%= form_with model:@user, url: user_session_path, class:"session", local: true do |f| %>
+    <%= form_with model: @user, url: user_session_path, class:"session", local: true do |f| %>
       <div class="form-group-2">
         <%= f.email_field :email, class:"input-default", id:"email", placeholder:"Email", autofocus: true %>
       </div>

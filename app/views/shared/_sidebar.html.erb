@@ -7,36 +7,36 @@
       Category of Events
     </div>
     <div class="events">
-      # <%=link_to "language", language_events_path %>
+      # <%=link_to "Language Exchange", language_events_path %>
     </div>
     <div class="events">
-      # <%=link_to "culuture", culture_events_path %>
+      # <%=link_to "Culuture", culture_events_path %>
     </div>
     <div class="events">
-      # <%=link_to "hangout", hangout_events_path %>
+      # <%=link_to "Hang out", hangout_events_path %>
     </div>
     <div class="events">
-      # <%=link_to "others", others_events_path %>
+      # <%=link_to "Others", others_events_path %>
     </div>
     <div class= "events-other">
       <%=link_to "Create Events", new_event_path %>
     </div>
     <div class= "events-other">
-      <%=link_to "search", events_search_path %>
+      <%=link_to "Search", events_search_path %>
     </div>
     <div class= "events-other">
-      <%=link_to "memories", tweets_path %>
+      <%=link_to "Memories", tweets_path %>
     </div>
     <% if user_signed_in? %>
       <div class= "user">
-        <%=link_to "about me", user_path(:id) %>
+        <%=link_to "About Me", user_path(:id) %>
       </div>
       <div class= "user">
-        <%=link_to "bye", destroy_user_session_path, method: :delete %>
+        <%=link_to "Bye", destroy_user_session_path, method: :delete %>
       </div>
     <% else %>
       <div class= "user">
-        <%=link_to "join", new_user_registration_path %>
+        <%=link_to "Join", new_user_registration_path %>
       </div>
     <% end %>
   </div>
