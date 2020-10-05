@@ -8,7 +8,7 @@
 .language-img {
   height: 100vh;
   width: 100vw;
-  background-image: url(../language.jpg);
+  background-image: url("../language.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -18,7 +18,7 @@
 .culture-img {
   height: 100vh;
   width: 100vw;
-  background-image: url(../festival.jpg);
+  background-image: url("../festival.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -28,7 +28,7 @@
 .hangout-img {
   height: 100vh;
   width: 100vw;
-  background-image: url(../picnic.jpg);
+  background-image: url("../picnic.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -38,7 +38,7 @@
 .others-img {
   height: 100vh;
   width: 100vw;
-  background-image: url(../young-people.jpg);
+  background-image: url("../young-people.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;

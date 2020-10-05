@@ -12,13 +12,15 @@
           <%= image_tag @tweet.image, class: "tweet-show-image" %>
         </div>
         <div class= "show-edit-destroy">
-        <% if @tweet.user_id == current_user.id %>
-          <div class= "show-edit">
-            <%= link_to "EDIT", edit_tweet_path(@tweet.id), method: :get %>
-          </div>
-          <div class= "show-delete">
-            <%= link_to "DELETE", tweet_path, method: :delete %>
-          </div>
+        <% if user_signed_in? %>
+          <% if @tweet.user_id == current_user.id %>
+            <div class= "show-edit">
+              <%= link_to "EDIT", edit_tweet_path(@tweet.id), method: :get %>
+            </div>
+            <div class= "show-delete">
+              <%= link_to "DELETE", tweet_path, method: :delete %>
+            </div>
+          <% end %>
         <% end %>
         </div>
       </div>
@@ -34,14 +36,16 @@
 
     <div class="tweet-review">
       <%= form_with(model: [@tweet, @review], local: true) do |f| %>
-      <div class= "review-main">
-        <div class= "review-text">
-          <%= f.text_area :text, class: "review-text" %>
+      <% if user_signed_in? %>
+        <div class= "review-main">
+          <div class= "review-text">
+            <%= f.text_area :text, class: "review-text" %>
+          </div>
+          <div class= "review-btn">
+            <%= f.submit "send", class: "review-btn" %>
+          </div>
         </div>
-        <div class= "review-btn">
-          <%= f.submit "send", class: "review-btn" %>
-        </div>
-      </div>
+      <% end %>
       <% end %>
 
       <div class="reviews">
