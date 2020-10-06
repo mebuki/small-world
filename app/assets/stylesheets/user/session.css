@@ -5,36 +5,50 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
-  position: relative;
 }
 
 .signin-info {
-  position: absolute;
-  top: 100px;
-  left: 70px;
+  padding-top: 20vh;
+  margin-left: 10vw;
 }
 
 .form-group-2 {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+}
+
+
+.back-to-top-2-btn {
+  height: 40px;
+  width: 80px;
+  background: #979292cc;
+  text-align: center;
+  padding: 7px;
+  margin: 25vh 0 0 85vw;
 }
 
 .back-to-top-2 {
-  position: absolute;
-  bottom: 90px;
-  right: 100px;
-  height: 30px;
-  width: 80px;
-  background: #979292cc;
-  padding-top: 5px;
-  text-align: center;
+  color: black;
   font-size: 15px;
   font-family: 'Courier New', Courier, monospace;
   border: none;
 }
 
-.back-to-top-2:hover {
+.back-to-top-2-btn:hover {
   box-shadow: none;
-  color: white;
   background: #99CCFF;
-  font-weight: bolder;
+}
+
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+
+  .signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-to-top-2-btn {
+    margin: 25vh auto;
+  }
 }

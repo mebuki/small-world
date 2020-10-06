@@ -1,13 +1,12 @@
-.wlap{
+.wrap{
   overflow: hidden;
 }
 
 .top{
+  background-image: url(ocean.jpg);
+  background-size: cover;
   height: 100vh;
   width: 100vw;
-  background-image: url("ocean.jpg");
-  background-size: cover;
-
 }
 
 .title {
@@ -20,7 +19,6 @@
   color: #fafafae3;
   text-shadow : 3px -4px #7c7979;
   font-family: fantasy;
-  display: inline-block;
 }
 
 
@@ -36,4 +34,31 @@
   font-size: 23px;
   color: #444444;
   font-family: cursive;
+}
+
+
+
+/* スマホ表示時 */
+@media (max-width: 599px) {
+  .title {
+    padding: 60px auto;
+  }
+  
+  .top-name{
+    font-size: 40px;
+  }
+  
+  
+  .top-in{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 8px 0;
+  }
+  
+  .top-ins{
+    font-size: 18px;
+ 
+  }
 }

@@ -5,26 +5,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
-  position: relative;
+  display: flex;
+}
+
+.signup-left {
+  width: 30vw;
 }
 
 .registration-title {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  height: 50px;
+  margin-top: 20px;
+  padding-left: 40px;
+  height: 70px;
   width: 500px;
-  background-color: #e4e4d0d8;
-  text-align: center;
+  background-color: #dbdbd5d8;
   font-size: 40px;
   font-family: fantasy;
 }
 
+.signup-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 250px;
+}
 
 .signup-info {
-  position: absolute;
-  top: 70px;
-  right: 150px;
+  margin-left: 20vw ;
 }
 
 .form-group {
@@ -32,7 +39,7 @@
 }
 
 .input-default {
-  height: 40px;
+  height: 50px;
   width: 300px;
   padding: 5px;
   background: whitesmoke;
@@ -43,7 +50,7 @@
 
 .input-default-hash {
   height: 50px;
-  width: 310px;
+  width: 300px;
   padding: 5px;
   background: whitesmoke;
   font-size: 15px;
@@ -52,12 +59,12 @@
 }
 
 .register-btn {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .register-botton {
   height: 50px;
-  width: 310px;
+  width: 300px;
   padding: 5px;
   background: #99FFCC;
   font-size: 15px;
@@ -72,23 +79,88 @@
   font-weight: bolder;
 }
 
-.back-to-top {
-  position: absolute;
-  bottom: 50px;
-  left: 100px;
-  height: 30px;
+.back-to-top-btn {
+  margin: 5vh 0 0 20vw ;
+  height: 40px;
   width: 80px;
-  background: #D3D3D3;
-  padding-top: 5px;
+  background: #979292cc;
+  text-align: center;
+  padding: 7px;
+}
+
+.back-to-top {
+  color: black;
   text-align: center;
   font-size: 15px;
   font-family: 'Courier New', Courier, monospace;
   border: none;
 }
 
-.back-to-top:hover {
+.back-to-top-btn:hover {
   box-shadow: none;
-  color: white;
   background: #99CCFF;
-  font-weight: bolder;
+}
+
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  .signup {
+    flex-direction: column;
+  }
+  
+  .registration-title {
+    top: 20px;
+    height: 40px;
+    width: 450px;
+    font-size: 30px;
+  } 
+  
+  .signup-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow: scroll;
+  }
+  
+  .signup-info {
+    margin: 0 auto ;
+  }
+  
+  .form-group {
+    margin-top: 40px;
+  }
+  
+  .input-default {
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+  }
+  
+  .input-default-hash {
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+  }
+  
+  .register-btn {
+    margin-top: 40px;
+  }
+  
+  .register-botton {
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+  }
+  
+  .back-to-top-btn {
+    margin: 60px auto 0;
+    height: 40px;
+    width: 60px;
+    padding: 7px;
+  }
+  
+  .back-to-top {
+    font-size: 10px;
+  }
+  
 }
