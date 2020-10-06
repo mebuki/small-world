@@ -1,7 +1,56 @@
 <div class= "side">
+
+  <div id="nav-drawer">
+    <input id="nav-input" type="checkbox" class="nav-unshown">
+    <label id="nav-open" for="nav-input"><span></span></label>
+    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <div id="nav-content">
+      <div class= "side-bar-x">
+        <div class= "category">
+          Category of Events
+        </div>
+        <div class="events">
+          # <%=link_to "Language Exchange", language_events_path %>
+        </div>
+        <div class="events">
+          # <%=link_to "Culuture", culture_events_path %>
+        </div>
+        <div class="events">
+          # <%=link_to "Hang out", hangout_events_path %>
+        </div>
+        <div class="events">
+          # <%=link_to "Others", others_events_path %>
+        </div>
+        <div class= "events-other">
+          <%=link_to "Create Events", new_event_path %>
+        </div>
+        <div class= "events-other">
+          <%=link_to "Search", events_search_path %>
+        </div>
+        <div class= "events-other">
+          <%=link_to "Memories", tweets_path %>
+        </div>
+        <% if user_signed_in? %>
+          <div class= "user">
+            <%=link_to "About Me", user_path(:id) %>
+          </div>
+          <div class= "user">
+            <%=link_to "Bye", destroy_user_session_path, method: :delete %>
+          </div>
+        <% else %>
+          <div class= "user">
+            <%=link_to "Join", new_user_registration_path %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+
   <div class= "events-title">
     <%=link_to "It's a small world", events_path %> 
   </div>
+ 
   <div class= "side-bar">
     <div class= "category">
       Category of Events
@@ -40,4 +89,5 @@
       </div>
     <% end %>
   </div>
+
 </div>
