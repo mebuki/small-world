@@ -1,30 +1,38 @@
 <div class= "signup">
-  <h3 class= "registration-title">Who are YOU ?</h3>
-  <div class= "signup-info">
-    <%= form_with model: @user, url: user_registration_path, class: "registration", local: true do |f| %>
-      <%= render "shared/error_messages", model: f.object, class: "errors" %>
-      <div class="form-group">
-        <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"nickname", maxlength:"20" %>
-      </div>
-      <div class="form-group">
-        <%= f.email_field :email, class:"input-default", id:"email", placeholder:"Email", autofocus: true %>
-      </div>
-      <div class="form-group">
-        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"password" %>
-      </div>
-      <div class="form-group">
-        <%= f.password_field :password, class:"input-default", id:"password-confirmation", placeholder:"password for confirmation" %>
-      </div>
-      <div class="form-group">
-        <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"input-default-hash", id:"country"}) %>
-      </div>
-      <div class="form-group">
-        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"input-default-hash", id:"prefecture"}) %>
-      </div>
-      <div class="register-btn">
-        <%= f.submit "Go to Flight", class:"register-botton" %>
-      </div>
-    <% end %>
+  <div class= "signup-left">
+    <h3 class= "registration-title">Who are YOU ?</h3>
   </div>
-  <%= link_to "Back", root_path, class:"back-to-top" %>
+
+  <div class= "signup-right">
+    <div class= "signup-info">
+      <%= form_with model: @user, url: user_registration_path, class: "registration", local: true do |f| %>
+        <%= render "shared/error_messages", model: f.object, class: "errors" %>
+        <div class="form-group">
+          <%= f.text_field :nickname, class:"input-default", id:"nickname", placeholder:"nickname", maxlength:"20" %>
+        </div>
+        <div class="form-group">
+          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"Email", autofocus: true %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, class:"input-default", id:"password", placeholder:"password" %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, class:"input-default", id:"password-confirmation", placeholder:"password for confirmation" %>
+        </div>
+        <div class="form-group">
+          <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"input-default-hash", id:"country"}) %>
+        </div>
+        <div class="form-group">
+          <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"input-default-hash", id:"prefecture"}) %>
+        </div>
+        <div class="register-btn">
+          <%= f.submit "Go to Flight", class:"register-botton" %>
+        </div>
+      <% end %>
+    </div>
+    <div class= "back-to-top-btn">
+      <%= link_to "Back", root_path, class:"back-to-top" %>
+    </div>
+  </div>
+
 </div>
