@@ -5,7 +5,7 @@
 }
 
 .tweet-new-title {
-  margin: 80px 0 15px 540px;
+  margin: 80px 0 15px 500px;
   font-size: 60px;
   font-family: fantasy;
   font-weight: bolder;
@@ -59,7 +59,7 @@
   height: 40px;
   width: 600px;
   background: azure;
-  font-size: 20px;
+  font-size: 15px;
   font-family: cursive;
   margin: 0 auto;
   border: none;
@@ -69,4 +69,64 @@
   font-weight: bolder;
   color: white;
   background: rgba(0, 0, 0, 0.411);
+}
+
+
+
+@media (max-width: 599px) {
+  .tweet-new {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/22/23/15/abstract-1851115_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+  }
+
+  .tweet-index-img {
+    display: none;
+  }
+
+  .tweet-index-hide {
+    display: block;
+  }
+
+  .tweet-new-title {
+    display: none;
+  }
+  
+  .tweet-new-info {
+    height: 50h;
+    width: 100%;
+    margin: 20vh 0 0 0;
+    position: absolute;
+    left: 0;
+  }
+  
+  .new-image {
+    height: 200px;
+    margin: 0 auto 10px;
+  }
+  
+  .new-title {
+    height: 40px;
+    width: 400px;
+    font-size: 15px;
+    margin: 0 auto 15px;
+  }
+  
+  .new-text {
+    height: 170px;
+    width: 500px;
+    font-size: 15px;
+    margin: 0 auto 10px;
+  }
+  
+  .new-btn {
+    height: 40px;
+    width: 500px;
+    margin: 0 auto;
+  }
+
 }

@@ -5,11 +5,6 @@
   display: flex;
 }
 
-.show-sidebar {
-  background: white;
-  width: 24vw;
-}
-
 .show-main {
   height: 550px;
   width: 800px;
@@ -65,13 +60,14 @@
 }
 
 .edit-delete {
-  font-size: 15px;
-  margin-top: 50px;
+  font-size: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
 }
 
 .edit-delete-btn {
+  height: 30px;
   width: 80px;
   color: #666666;
   border: 1px solid grey;
@@ -80,4 +76,64 @@
 .edit-delete-btn:hover {
   color: #99CCFF;
   background: rgba(0, 0, 0, 0.747);
+}
+
+.show-hide {
+  display: none;
+}
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .event-show {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/09/15/13/road-trip-1246530_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  .show-hide {
+    display: block;
+  }
+
+  .show-main {
+    height: 70vh;
+    width: 100%;
+    margin: 25vh 0 0 0;
+    overflow: scroll;
+    position: absolute;
+    left: 0;
+  }
+  
+  .show-name {
+    font-size: 33px;
+  }
+  
+  .show-time {
+    font-size: 25px;
+  }
+  
+  .show-place {
+    font-size: 23px;
+  }
+  
+  .show-image {
+    height: 200px;
+    width: 300px;
+  }
+  
+  .show-info {
+    height: 50vh;
+    width: 60vw;
+    font-size: 20px;
+    margin: 20px auto;
+  }
+  
+  .edit-delete {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  
 }

@@ -40,6 +40,10 @@
 
 /* スマホ表示時 */
 @media (max-width: 599px) {
+  .top{
+    background-position: right;
+  }
+
   .title {
     padding: 60px auto;
   }

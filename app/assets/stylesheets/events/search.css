@@ -1,7 +1,6 @@
 .event-search {
   width: 100vw;
   background-color: rgba(236, 233, 233, 0.603);
-  position: relative;
   display: flex;
 }
 
@@ -21,10 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; 
-  position: absolute;
-  top: 150px;
-  left: 400px;
+  margin: 150px auto;
 }
 
 .search-events {
@@ -34,9 +30,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: 40px;
-  left: 450px;
+  margin-left: 45%;
 }
 
 #q_purpose_id_eq{
@@ -123,8 +117,7 @@
 .search-results {
   height: 350px;
   width: 930px;
-  position: absolute;
-  top: 250px;
+  margin: 0 auto;
   overflow: scroll;
   display: flex;
   justify-content: center;
@@ -133,7 +126,7 @@
 
 .results-list {
   height: 130px;
-  width: 180px;
+  width: 210px;
   background: rgba(255, 255, 255, 0.671);
   margin: 10px;
   font-size: 18px;
@@ -148,7 +141,7 @@
 }
 
 .results-no-list {
-  height: 85px;
+  height: 180px;
   width: 400px;
   background: rgba(255, 255, 255, 0.671);
   margin: 50px;
@@ -158,3 +151,117 @@
   text-justify: center;
   padding: 15px;
 }
+
+.search-hide {
+  display: none;
+}
+
+
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .event-search {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://cdn.pixabay.com/photo/2014/07/31/22/50/photographer-407068_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+   .search-img {
+     display: none;
+   }
+
+   .search-hide {
+     display: block;
+   }
+
+   .search {
+    height: 70vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.527);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    position: absolute;
+    left: 0;
+  }
+  
+  .search-events {
+    height: 130px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #q_purpose_id_eq{
+    height: 30px;
+    width: 290px;
+    font-size: 15px;
+  }
+  
+  #q_month_id_eq {
+    height: 30px;
+    width: 50px;
+    font-size: 15px;
+  }
+  
+  #q_day_id_eq {
+    height: 30px;
+    width: 50px;
+    font-size: 15px;
+  }
+  
+  #q_year_id_eq {
+    height: 30px;
+    width: 50px;
+    font-size: 15px;
+  }
+  
+  #q_day_of_week_id_eq {
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+  }
+  
+  #q_event_time_id_eq {
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+  }
+  
+  .search-btn {
+    height: 30px;
+    width: 290px;
+    font-size: 15px;
+  }
+  
+  .search-results {
+    height: 350px;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  
+  .results-list {
+    height: 120px;
+    width: 170px;
+    margin: 10px;
+    font-size: 15px;
+    padding: 8px;
+  }
+  
+  .results-no-list {
+    height: 140px;
+    width: 250px;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+
+ }

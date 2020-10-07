@@ -1,17 +1,6 @@
 .user-show {
   width: 100vw;
-  background-color: rgba(236, 233, 233, 0.603);
-  position: relative;
-}
-
-.user-show-title {
-  transform: skewY(-6deg);
-  font-size: 80px;
-  font-weight: bolder;
-  font-family: fantasy;
-  position: absolute;
-  top: 8vh;
-  left: 1vw;
+  background-color: rgb(7, 7, 7);
 }
 
 .user-show-main {
@@ -21,7 +10,8 @@
 .user-show-info {
   height: 260px;
   width: 280px;
-  border: 1px solid black;
+  color: white;
+  border: 7px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -43,8 +33,7 @@
 }
 
 .edit-user:hover {
-  color: white;
-  background: black;
+  color: rgb(109, 188, 212);
 }
 
 .back-to-event {
@@ -56,8 +45,7 @@
 }
 
 .back-to-event:hover {
-  color: white;
-  background: black;
+  color: rgb(114, 212, 230);
 }
 
 .user-show-img {
@@ -76,19 +64,18 @@
 
 .user-events {
   height: 160px;
-  width: 63vw;
-  background: rgba(58, 58, 56, 0.932);
-  margin: 40px 0 0 65px;
+  width: 65vw;
+  background: rgba(216, 219, 213, 0.678);
+  margin: 40px 0 0 60px;
   overflow: scroll;
   white-space: nowrap;
 }
 
 .user-event {
-  height: 120px;
-  width: 180px;
-  background: rgba(245, 230, 230, 0.425);
-  margin: 0 20px;
-  margin-top: 18px;
+  height: 130px;
+  width: 190px;
+  background: rgba(94, 90, 90, 0.425);
+  margin: 15px 15px 0 15px;
   font-size: 15px;
   font-family: monospace;
   display: inline-block;
@@ -96,8 +83,8 @@
 }
 
 .user-event-name {
-  font-size: 18px;
-  margin: 10px 0 0 15px;
+  font-size: 17px;
+  margin: 10px 0 0 10px;
 }
 
 .user-event-time {
@@ -114,3 +101,48 @@
   background: grey;
 }
 
+.user-show-hide {
+  display: none;
+}
+
+
+
+
+@media (max-width: 599px) {
+  .user-show {
+    position: relative;
+  }
+  
+  .user-show-info {
+    display: none;
+  }
+
+  .user-show-main {
+    overflow: scroll;
+  }
+  
+  .user-events {
+    height: 22vh;
+    width: 77vw;
+  }
+  
+  .user-event {
+    height: 130px;
+    width: 190px;
+  }
+
+  .user-show-hide {
+    height: 20vh;
+    width: 280px;
+    color: black;
+    background: rgba(255, 255, 255, 0.671);
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px auto;
+  }
+
+
+}

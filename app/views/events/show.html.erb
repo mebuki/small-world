@@ -45,4 +45,48 @@
     </div>
   </div>
 
+  <div class= "show-hide">
+    <div class= "show-main">
+      <div class= "event-show-info">
+        <div class= "show-name">
+          <%= @event.name %>
+        </div>
+        <div class= "show-time">
+          <div class= "show-month">
+            <%= @event.month.name %>
+          </div>
+          <div class= "show-day">
+            <%= @event.day.name %>th
+          </div>
+          <div class= "show-year">
+            <%= @event.year.name %>
+          </div>
+        </div>
+        <div class= "show-place">
+          @ <%= @event.place %>
+        </div>
+        <div class= "show-image">
+          <%=image_tag @event.image, size:"300x200" %>
+        </div>
+        <div class= "show-info">
+          <%= @event.info %>
+        </div>
+        <div class= "edit-delete">
+        <% if user_signed_in? %>
+          <% if @event.user_id == current_user.id %>
+            <div class= "edit-delete-btn">
+              <%=link_to "edit", edit_event_path(@event.id), method: :get %>
+            </div>
+            <div class= "edit-delete-btn">  
+              <%=link_to "delete", event_path, method: :delete %>
+            </div>
+          <% end %>
+        <% end %>
+        </div>
+      <%# <%=link_to "質問する", new_event_comment_path(@event.id), method: :get, class: "event-comment" %> 
+      </div>
+    </div>
+  </div>
+
+
 </div>

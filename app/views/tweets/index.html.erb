@@ -22,4 +22,24 @@
     </div>
   </div>
 
+  <div class= "tweet-index-hide">
+    <div class= "tweet-index">
+      <%=link_to "how was event?", new_tweet_path %>
+    </div>
+    <div class= "tweets-infos">
+      <% @tweets.each do |tweet| %>
+        <div class="tweets">
+          <%=link_to tweet_path(tweet.id) do %>
+            <div class= "tweet-img">
+              <%= image_tag tweet.image, size: "200x140" %>
+            </div>
+            <div class= "tweet-title">
+              <%= tweet.title %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
 </div>

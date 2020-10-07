@@ -5,11 +5,6 @@
   display: flex;
 }
 
-.new-sidebar {
-  background: rgba(255, 255, 255, 0.952);
-  width: 24vw;
-}
-
 .event-information {
   height: 550px;
   width: 800px;
@@ -93,4 +88,101 @@
 .event-btn:hover {
   color: #99CCFF;
   background: rgba(0, 0, 0, 0.747);
+}
+
+.new-hide {
+  display: none;
+}
+
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  .event-new {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/09/15/13/road-trip-1246530_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+
+  .new-hide {
+    display: block;
+  }
+
+  .event-information {
+    height: 70vh;
+    width: 100%;
+    background: rgba(5, 5, 5, 0.514);
+    box-shadow: 8px 8px 5px #666666;
+    overflow: scroll;
+    margin: 25vh 0 0 0;
+    position: absolute;
+    left: 0;
+  }
+  
+  .new-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: fantasy;
+    font-weight: bolder;
+  }
+  
+  .new-event-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgba(240, 255, 255, 0.664);
+  }
+  
+  .event-a {
+    margin-bottom: 10px;
+  }
+  
+  .input-id {
+    height: 35px;
+    width: 300px;
+    font-size: 15px;
+  }
+  
+  .input {
+    height: 35px;
+    width: 300px;
+    font-size: 15px;
+    padding-top: 5px;
+  }
+  
+  .input-ids {
+    height: 35px;
+    width: 65px;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  
+  .input-ids-a {
+    height: 35px;
+    width: 45px;
+    resize: none;
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  
+  .input-info {
+    height: 300px;
+    width: 300px;
+    resize: none;
+    font-size: 15px;
+    padding-top: 15px;
+    overflow: scroll;
+  }
+  
+  .event-btn {
+    height: 30px;
+    width: 300px;
+    font-size: 15px;
+    margin: 5px auto;
+  }
+  
 }

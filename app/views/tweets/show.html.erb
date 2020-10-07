@@ -3,9 +3,6 @@
   <%= render "shared/sidebar" %>
 
   <div class= "tweet-index-img">
-
-    <div class= "tweet-show-title">M e m o r i e s
-    </div>
     <div class= "tweet-show-main">
       <div class="tweet-show-info">
         <div class= "tweet-show-image">
@@ -63,7 +60,66 @@
         <% end %>
       </div>
     </div>
+  </div>
 
+  <div class= "tweet-show-hide">
+    <div class= "tweet-show-main">
+      <div class="tweet-show-info">
+        <div class= "tweet-show-image">
+          <%= image_tag @tweet.image, class: "tweet-show-image" %>
+        </div>
+        <div class= "show-edit-destroy">
+        <% if user_signed_in? %>
+          <% if @tweet.user_id == current_user.id %>
+            <div class= "show-edit">
+              <%= link_to "EDIT", edit_tweet_path(@tweet.id), method: :get %>
+            </div>
+            <div class= "show-delete">
+              <%= link_to "DELETE", tweet_path, method: :delete %>
+            </div>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+      <div class= "tweet-show-info2">
+        <div class= "show-title">
+          <%= @tweet.title %>
+        </div>
+        <div class= "show-text">
+          <%= @tweet.text %>
+        </div>
+      </div>
+    </div>
+
+    <div class="tweet-review">
+      <%= form_with(model: [@tweet, @review], local: true) do |f| %>
+      <% if user_signed_in? %>
+        <div class= "review-main">
+          <div class= "review-text">
+            <%= f.text_area :text, class: "review-text" %>
+          </div>
+          <div class= "review-btn">
+            <%= f.submit "send", class: "review-btn" %>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+
+      <div class="reviews">
+        <% if @reviews %>
+          <% @reviews.each do |review| %>
+          <div class= "re-review">
+            <div class= "re-review-user">
+              <strong><%= review.user.nickname %></strong>
+            </div>
+            <div class= "re-review-text">
+              <%= review.text %>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
 </div>
