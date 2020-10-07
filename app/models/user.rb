@@ -8,10 +8,10 @@ class User < ApplicationRecord
   belongs_to_active_hash :country 
   belongs_to_active_hash :prefecture
 
-  has_many :events
+  has_many :events, dependent: :destroy
   has_many :tweets
   has_many :reviews
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :like_events, through: :likes, source: :event
 
   # has_many :comments

@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_140217) do
     t.integer "event_time_id", null: false
     t.string "place", null: false
     t.text "info", null: false
+    t.integer "likes_count"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

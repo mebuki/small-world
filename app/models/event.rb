@@ -8,13 +8,13 @@ class Event < ApplicationRecord
   belongs_to_active_hash :event_time
 
   belongs_to :user
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_one_attached :image
 
   # has_many :comments
 
-  def liked_by?(user)
-    likes.where(user_id: user.id).exists?
+  def like_user(user_id)
+    likes.find_by(user_id: user_id)
   end
 
   with_options presence: true do

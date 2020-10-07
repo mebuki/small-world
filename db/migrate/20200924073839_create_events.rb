@@ -10,6 +10,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.integer       :event_time_id,  null: false
       t.string        :place,          null: false
       t.text          :info,           null: false
+      t.integer       :likes_count
       t.references    :user,           foreign_key: true
       t.timestamps
     end

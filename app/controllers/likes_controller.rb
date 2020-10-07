@@ -1,15 +1,23 @@
 class LikesController < ApplicationController
+  before_action :set_event
+
 
   def create
-    like = current_user.likes.new(event_id: params[:event_id])
+    like = current_user.likes.new(event_id: @event.id)
     like.save
-    redirect_to events_path
   end
 
   def destroy
-    like = Like.find_by(event_id: params[:event_id], user_id: current_user.id)
+    like = current_user.likes.find_by(event_id: @event.id)
     like.destroy
-    redirect_to events_path
+  end
+
+
+  private
+
+  def set_event
+    @event = Event.find(params[:event_id])
+    @id_name = "#like-link-#{@event.id}"
   end
 
 end
