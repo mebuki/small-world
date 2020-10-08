@@ -19,6 +19,7 @@
 
     <div class= "user-show-img">
       <div class= "events-scroll">
+        <div class= "user-events-title">My Events</div>
         <div class= "user-events">
           <% if @events.present? %>
             <% @events.each do |event| %>
@@ -39,6 +40,7 @@
           <% end %>
         </div>
 
+        <div class= "user-events-title">Favorite Events</div>
         <div class= "user-events">
           <% if @like_events.present? %>
             <% @like_events.each do |event| %>

@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
 
   def show
     @review = Review.new
-    @reviews = @tweet.reviews.includes(:user)
+    @reviews = @tweet.reviews.includes(:user).order("created_at DESC")
   end
 
   def edit

@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   before_action :search_event, only: [:search]
 
   def search
-    @results = @e.result
+    @results = @e.result.order("created_at DESC")
   end
 
   def new

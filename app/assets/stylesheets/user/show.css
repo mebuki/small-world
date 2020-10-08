@@ -62,11 +62,19 @@
   flex-direction: column;
 }
 
+.user-events-title {
+  margin: 30px 0 0 30px;
+  font-size: 30px;
+  font-family: monospace;
+  border-bottom: solid 2px black;
+  width: 85%;
+}
+
 .user-events {
   height: 160px;
-  width: 65vw;
+  width: 62vw;
   background: rgba(216, 219, 213, 0.678);
-  margin: 40px 0 0 60px;
+  margin: 20px 0 0 60px;
   overflow: scroll;
   white-space: nowrap;
 }

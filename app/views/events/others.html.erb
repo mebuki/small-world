@@ -6,8 +6,8 @@
     <div class= "main-events">
       <% @events.where("purpose_id = 4").each do |event| %>
       <% @event = event %>
-      <ul class= "events-list">
-        <li class= "lists">
+      <div class= "events-list">
+        <div class= "lists">
           <%=link_to event_path(event.id) do %>
             <div class= "list-name">
               <%= event.name %>
@@ -19,8 +19,8 @@
           <div class="like">
             <%=render partial: "likes/like", event: event %>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
       <% end %>
     </div>
     <div class= "category-name">OTHERS</div>
