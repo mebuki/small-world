@@ -100,6 +100,7 @@
   size: 10px;
 }
 
+
 .category-name {
   position: absolute;
   color: rgba(252, 248, 248, 0.89);
@@ -179,7 +180,8 @@
     justify-content: space-around;
     margin-top: 20px;
   }
-  
+
+
   .category-name {
     font-size: 6vh;
     right: 20px;

@@ -2,11 +2,11 @@
   <div class="like-link" id="like-link-<%= @event.id %>">
     <% if current_user.likes.find_by(event_id: @event.id) %>
       <%= link_to event_likes_path(@event.id), method: :delete, remote: true do %>
-          <div class = "iine__button">❤️ <%= @event.likes.count %> people</div>
+        <div class = "iine__button">❤️ <%= @event.likes.count %> people</div>
       <% end %>
     <% else %>
       <%= link_to event_likes_path(@event.id), method: :post, remote: true do %>
-          <div class = "iine__button">♡️ <%= @event.likes.count %> people</div>
+        <div class = "iine__button">♡️ <%= @event.likes.count %> people</div>
       <% end %>
     <% end %>
   </div>

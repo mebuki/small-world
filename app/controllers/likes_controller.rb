@@ -3,12 +3,12 @@ class LikesController < ApplicationController
 
 
   def create
-    like = current_user.likes.new(event_id: @event.id)
+    like = current_user.likes.build(event_id: params[:event_id])
     like.save
   end
 
   def destroy
-    like = current_user.likes.find_by(event_id: @event.id)
+    like = Like.find_by(event_id: params[:event_id], user_id: current_user.id)
     like.destroy
   end
 

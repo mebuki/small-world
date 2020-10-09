@@ -13,9 +13,10 @@ class Event < ApplicationRecord
 
   # has_many :comments
 
-  def like_user(user_id)
-    likes.find_by(user_id: user_id)
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
   end
+
 
   with_options presence: true do
     validates :name, :place, :info, :image
