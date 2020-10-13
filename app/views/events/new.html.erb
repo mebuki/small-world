@@ -18,7 +18,7 @@
           <%= f.text_area :name, placeholder:"name", class: "input", id: "name" %>
         </div>
         <div class= "event-a">
-          <%= f.datetime_field :event_datetime, class:"form-controll" %>
+          <%= f.date_field :event_date, class:"form-controll" %><%= f.time_field :event_time, class:"form-controll" %>
           </div>
         <div class= "event-a">
           <%= f.text_area :place, placeholder:"place", class: "input", id: "place" %>
@@ -49,7 +49,7 @@
           <%= f.text_area :name, placeholder:"name", class: "input", id: "name" %>
         </div>
         <div class= "event-a">
-          <%= f.datetime_field :event_datetime, class:"form-controll" %>
+          <%= f.date_field :event_date, class:"form-controll" %><%= f.time_field :event_time, class:"form-controll" %>
         </div>
         <div class= "event-a">
           <%= f.text_area :place, placeholder:"place", class: "input", id: "place" %>

@@ -9,18 +9,23 @@
           <%= @event.name %>
         </div>
         <div class= "show-time">
-          <div class= "show-month">
-            <%= @event.month.name %>
+          <div class= "show-date">
+            <%= @event.event_date %>
           </div>
-          <div class= "show-day">
-            <%= @event.day.name %>th
-          </div>
-          <div class= "show-year">
-            <%= @event.year.name %>
+          <div class= "show-event-time">
+            <%= @event.event_time %>
           </div>
         </div>
         <div class= "show-place">
           @ <%= @event.place %>
+        </div>
+        <div class="show-user-like">
+          <div class= "show-user">
+            Event's Host : <%= @event.user.nickname %>
+          </div>
+          <div class= "show-like">
+            <%=render partial: "likes/like", event: @event %>
+          </div>
         </div>
         <div class= "show-image">
           <%=image_tag @event.image, size:"400x300" %>
@@ -52,18 +57,23 @@
           <%= @event.name %>
         </div>
         <div class= "show-time">
-          <div class= "show-month">
-            <%= @event.month.name %>
+          <div class= "show-date">
+            <%= @event.event_date %>
           </div>
-          <div class= "show-day">
-            <%= @event.day.name %>th
-          </div>
-          <div class= "show-year">
-            <%= @event.year.name %>
+          <div class= "show-event-time">
+            <%= @event.event_time %>
           </div>
         </div>
         <div class= "show-place">
           @ <%= @event.place %>
+        </div>
+        <div class="show-user-like">
+          <div class= "show-user">
+            Event's Host : <%= @event.user.nickname %>
+          </div>
+          <div class= "show-like">
+            <%=render partial: "likes/like", event: @event %>
+          </div>
         </div>
         <div class= "show-image">
           <%=image_tag @event.image, size:"300x200" %>
@@ -90,3 +100,5 @@
 
 
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

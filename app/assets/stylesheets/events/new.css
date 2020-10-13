@@ -44,7 +44,7 @@
 
 .form-controll {
   height: 40px;
-  width: 595px;
+  width: 295px;
   font-size: 20px;
   font-family: fantasy;
 }
@@ -152,6 +152,13 @@
     height: 35px;
     width: 300px;
     font-size: 15px;
+  }
+
+  .form-controll {
+    height: 35px;
+    width: 150px;
+    font-size: 15px;
+    font-family: fantasy;
   }
   
   .input {

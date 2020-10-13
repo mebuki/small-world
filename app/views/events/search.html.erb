@@ -10,11 +10,8 @@
             <%= f.collection_select :purpose_id_eq, Purpose.all, :id, :name, include_blank: 'Category' %>
           </div>
           <div class= "search-time">
-            <%= f.collection_select :month_id_eq, Month.all, :id, :name, include_blank: 'Month' %>
-            <%= f.collection_select :day_id_eq, Day.all, :id, :name, include_blank: 'Day' %>
-            <%= f.collection_select :year_id_eq, Year.all, :id, :name,  include_blank: 'Year' %>
-            <%= f.collection_select :day_of_week_id_eq, DayOfWeek.all, :id, :name, include_blank: 'Day of Week' %>
-            <%= f.collection_select :event_time_id_eq, EventTime.all, :id, :name, include_blank: 'Time' %>
+            <%= f.date_field :event_date_eq %>
+            <%= f.time_field :event_time_eq %>
           </div>
           <div class= "search-botton">
             <%= f.submit "S E A R C H", class: "search-btn" %>
@@ -31,12 +28,8 @@
                 <div class= "results-list">
                   <%= result.name %>
                   <br><br>
-                  <%= result.month.name %>
-                  <%= result.day.name %>th
-                  <%= result.year.name %>
-                  <br>
-                  <%= result.day_of_week.name %>
-                  <%= result.event_time.name %>
+                  <%= result.event_date %>
+                  <%= result.event_time %>
                 <div>
               </li>
               <% end %>
@@ -60,11 +53,8 @@
             <%= f.collection_select :purpose_id_eq, Purpose.all, :id, :name, include_blank: 'Category' %>
           </div>
           <div class= "search-time">
-            <%= f.collection_select :month_id_eq, Month.all, :id, :name, include_blank: 'Month' %>
-            <%= f.collection_select :day_id_eq, Day.all, :id, :name, include_blank: 'Day' %>
-            <%= f.collection_select :year_id_eq, Year.all, :id, :name,  include_blank: 'Year' %>
-            <%= f.collection_select :day_of_week_id_eq, DayOfWeek.all, :id, :name, include_blank: 'Day of Week' %>
-            <%= f.collection_select :event_time_id_eq, EventTime.all, :id, :name, include_blank: 'Time' %>
+            <%= f.date_field :event_date_eq %>
+            <%= f.time_field :event_time_eq %>
           </div>
           <div class= "search-botton">
             <%= f.submit "S E A R C H", class: "search-btn" %>
@@ -81,12 +71,8 @@
                 <div class= "results-list">
                   <%= result.name %>
                   <br><br>
-                  <%= result.month.name %>
-                  <%= result.day.name %>th
-                  <%= result.year.name %>
-                  <br>
-                  <%= result.day_of_week.name %>
-                  <%= result.event_time.name %>
+                  <%= result.event_date %>
+                  <%= result.event_time %>
                 <div>
               </li>
               <% end %>

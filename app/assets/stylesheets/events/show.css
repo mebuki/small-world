@@ -22,30 +22,39 @@
 
 .show-name {
   font-size: 35px;
+  margin-bottom: 15px;
 }
 
 .show-time {
-  font-size: 25px;
+  font-size: 23px;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
-.show-month {
-  margin-right: 10px;
-}
-
-.show-day {
-  margin-right: 10px;
+.show-date {
+  margin-right: 30px;
 }
 
 .show-place {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.show-user-like {
+  display: flex;
+  justify-content: center;
   font-size: 20px;
+}
+
+.show-user {
+  margin-right: 30px;
 }
 
 .show-image {
   height: 100%;
   width: 100%;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 .show-info {

@@ -14,7 +14,7 @@ class Event < ApplicationRecord
 
 
   with_options presence: true do
-    validates :name, :event_datetime, :place, :info, :image
+    validates :name, :event_date, :event_time, :place, :info, :image
     validates :purpose_id, numericality: { other_than: 0 }
   end
 end

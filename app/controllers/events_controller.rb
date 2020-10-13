@@ -2,6 +2,8 @@ class EventsController < ApplicationController
   before_action :event_index, only: [:search, :language, :culture, :hangout, :others]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :search_event, only: [:search]
+  before_action :authenticate_user!, only: [:new, :edit]
+
 
   def search
     @results = @e.result.order("created_at DESC")
@@ -47,7 +49,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:image, :purpose_id, :name, :event_datetime, :place, :info).merge(user_id: current_user.id)
+    params.require(:event).permit(:image, :purpose_id, :name, :event_date, :event_time, :place, :info).merge(user_id: current_user.id)
   end
 
   def event_index
