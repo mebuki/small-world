@@ -72,3 +72,6 @@ gem 'image_processing', '~> 1.2'
 gem "aws-sdk-s3", require: false
 
 gem 'jquery-rails'
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'

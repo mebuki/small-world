@@ -18,12 +18,8 @@
           <%= f.text_area :name, placeholder:"name", class: "input", id: "name" %>
         </div>
         <div class= "event-a">
-          <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class: "input-ids", id: "month"}) %>
-          <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class: "input-ids-a", id: "day"}) %>
-          <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class: "input-ids", id: "year"}) %>
-          <%= f.collection_select(:day_of_week_id, DayOfWeek.all, :id, :name, {}, {class: "input-ids-a", id: "day-of-week"}) %>
-          <%= f.collection_select(:event_time_id, EventTime.all, :id, :name, {}, {class: "input-ids", id: "event-time"}) %>
-        </div>
+          <%= f.datetime_field :event_datetime, class:"form-controll" %>
+          </div>
         <div class= "event-a">
           <%= f.text_area :place, placeholder:"place", class: "input", id: "place" %>
         </div>
@@ -53,11 +49,7 @@
           <%= f.text_area :name, placeholder:"name", class: "input", id: "name" %>
         </div>
         <div class= "event-a">
-          <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class: "input-ids", id: "month"}) %>
-          <%= f.collection_select(:day_id, Day.all, :id, :name, {}, {class: "input-ids-a", id: "day"}) %>
-          <%= f.collection_select(:year_id, Year.all, :id, :name, {}, {class: "input-ids", id: "year"}) %>
-          <%= f.collection_select(:day_of_week_id, DayOfWeek.all, :id, :name, {}, {class: "input-ids-a", id: "day-of-week"}) %>
-          <%= f.collection_select(:event_time_id, EventTime.all, :id, :name, {}, {class: "input-ids", id: "event-time"}) %>
+          <%= f.datetime_field :event_datetime, class:"form-controll" %>
         </div>
         <div class= "event-a">
           <%= f.text_area :place, placeholder:"place", class: "input", id: "place" %>
