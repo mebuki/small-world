@@ -61,8 +61,8 @@
  @media (max-width: 599px) {
 
   .events-title {
-    font-size: 8vh;
-    padding: 10px 0 0 15px;
+    font-size: 25px;
+    padding: 5px 0 0 15px;
     position: relative; top: 10px; z-index: 2;
   }
 
@@ -73,7 +73,7 @@
    .side-bar-x {
     border-left: thin solid;
     padding-left: 10px;
-    margin: 20vh 0 0 40px;
+    margin: 20vh 0 0 30px;
     font-family: cursive;
     font-weight: bolder;
   }
@@ -103,7 +103,7 @@
     height: 3px;/*線の太さ*/
     width: 25px;/*長さ*/
     border-radius: 3px;
-    background: rgba(253, 251, 251, 0.678);
+    background: rgba(253, 251, 251, 0.959);
     display: block;
     content: '';
     cursor: pointer;
@@ -136,8 +136,8 @@
     top: 0;
     left: 0;
     z-index: 9999;/*最前面に*/
-    width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-    max-width: 300px;/*最大幅（調整してください）*/
+    width: 80%;/*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 250px;/*最大幅（調整してください）*/
     height: 100%;
     background: rgba(255, 255, 255, 0.63);/*背景色*/
     transition: .3s ease-in-out;/*滑らかに表示*/
