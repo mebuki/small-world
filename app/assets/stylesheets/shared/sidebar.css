@@ -61,7 +61,7 @@
  @media (max-width: 599px) {
 
   .events-title {
-    font-size: 25px;
+    font-size: 33px;
     padding: 5px 0 0 15px;
     position: relative; top: 10px; z-index: 2;
   }
@@ -136,8 +136,8 @@
     top: 0;
     left: 0;
     z-index: 9999;/*最前面に*/
-    width: 80%;/*右側に隙間を作る（閉じるカバーを表示）*/
-    max-width: 250px;/*最大幅（調整してください）*/
+    width: 85%;/*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 300px;/*最大幅（調整してください）*/
     height: 100%;
     background: rgba(255, 255, 255, 0.63);/*背景色*/
     transition: .3s ease-in-out;/*滑らかに表示*/
