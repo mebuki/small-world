@@ -8,7 +8,6 @@ Rails.application.routes.draw do
       get :language, :culture, :hangout, :others
     end
     resource :likes, only: [:create, :destroy] 
-    # resources :comments, only: [:new, :create]
   end
 
   resources :tweets do
