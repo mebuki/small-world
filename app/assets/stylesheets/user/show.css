@@ -132,19 +132,20 @@
   .user-events {
     height: 22vh;
     width: 77vw;
+    margin: 15px auto;
   }
   
   .user-event {
-    height: 130px;
-    width: 190px;
+    height: 80%;
+    width: 80%;
   }
 
   .user-show-hide {
     height: 20vh;
-    width: 280px;
+    width: 60%;
     color: black;
     background: rgba(255, 255, 255, 0.671);
-    border: 3px solid black;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
