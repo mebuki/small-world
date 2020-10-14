@@ -89,13 +89,13 @@
     height: 65vh;
     width: 100%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: wrap;
     overflow: scroll;
   }
   
   .tweets {
-    height: 200px;
-    width: 230px;
+    height: 30vh;
+    width: 80%;
     margin: 8px auto;
   }
   
