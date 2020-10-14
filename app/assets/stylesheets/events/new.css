@@ -133,13 +133,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
     font-family: fantasy;
     font-weight: bolder;
   }
   
   .new-event-title {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 20px;
     color: rgba(240, 255, 255, 0.664);
   }
