@@ -6,7 +6,6 @@ class Event < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_one_attached :image
 
-  # has_many :comments
 
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
