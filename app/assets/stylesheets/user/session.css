@@ -46,9 +46,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-position: center;
+    position: relative;
   }
-
+  
+  .signin-info {
+    position: absolute;
+    padding-top: 8vh;
+    margin: 5vh auto;
+  }
+  
+  .form-group-2 {
+    margin-bottom: 45px;
+  }
+  
   .back-to-top-2-btn {
-    margin: 25vh auto;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    padding: 7px;
+    position: absolute;
+    margin: 70vh 0 0 0;
+
+  }
+  
+  .back-to-top-2 {
+    color: black;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+  }
+  
+  .back-to-top-2-btn:hover {
+    box-shadow: none;
+    background: #99CCFF;
   }
 }

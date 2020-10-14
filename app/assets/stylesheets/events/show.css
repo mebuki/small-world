@@ -110,39 +110,54 @@
   .show-main {
     height: 70vh;
     width: 100%;
-    margin: 25vh 0 0 0;
+    margin: 20vh 0 0 0;
     overflow: scroll;
     position: absolute;
     left: 0;
   }
   
   .show-name {
-    font-size: 33px;
+    font-size: 25px;
   }
   
   .show-time {
-    font-size: 25px;
+    font-size: 23px;
   }
   
   .show-place {
     font-size: 23px;
   }
+
+  .show-user-like {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+  
+  .show-user {
+    margin-right: 20px;
+  }
+  
   
   .show-image {
-    height: 200px;
-    width: 300px;
+    height: 20%;
+    width: 90%;
   }
   
   .show-info {
     height: 50vh;
-    width: 60vw;
-    font-size: 20px;
+    width: 70vw;
+    font-size: 18px;
     margin: 20px auto;
   }
   
   .edit-delete {
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
+  }
+
+  .edit-delete-btn {
+    height: 20px;
   }
   
 }

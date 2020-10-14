@@ -146,25 +146,31 @@
     margin-top: 20vh;
     display: block;
     height: 80vh;
-    width: 100%;
+    width: 100vw;
     overflow: scroll;
     position: absolute;
     left: 0;
   }
   
   .tweet-show-main {
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
   }
 
   .tweet-show-info {
-    height: 250px;
-    width: 400px;
-    margin-left: 0;
+    height: 30vh;
+    width: 100%;
+    margin: 0;
   }
   
   .tweet-show-image {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .tweet-show-image1 {
     height: 100%;
     width: 100%;
   }
@@ -172,42 +178,45 @@
   .show-edit-destroy {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 15px;
   }
 
   .tweet-show-info2 {
-    width: 500px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   
   .show-title {
+    width: 100%;
     font-size: 20px;
   }
   
   .show-text {
+    width: 100%;
     font-size: 18px;
     overflow: scroll;
   }
   
   .tweet-review {
-    width: 500px;
-    margin: 150px auto 0;   
+    width: 90%;
+    margin: 130px auto 0;   
   }
   
   .review-main {
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
+    margin: 0 auto;
   }
   
   .review-text {
     height: 30px;
-    width: 300px;
+    width: 200px;
     font-size: 20px;
   }
   
@@ -223,10 +232,25 @@
   }
   
   .reviews {
-    width: 500px;
-    margin: 20px auto;
+    width: 100%;
+    margin: 10px auto;
     overflow: scroll;
     padding: 10px;
+  }
+
+  .re-review {
+    display: flex;
+    font-family: fantasy;
+  }
+  
+  .re-review-user {
+    width: 50px;
+    font-size: 20px;
+    margin-right: 30px;
+  }
+  
+  .re-review-text {
+    font-size: 18px;
   }
   
   

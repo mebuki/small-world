@@ -119,12 +119,12 @@
   }
 
   .event-information {
-    height: 70vh;
+    height: 70%;
     width: 100%;
     background: rgba(5, 5, 5, 0.514);
     box-shadow: 8px 8px 5px #666666;
     overflow: scroll;
-    margin: 25vh 0 0 0;
+    margin: 18vh 0 0 0;
     position: absolute;
     left: 0;
   }
@@ -140,7 +140,7 @@
   
   .new-event-title {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin: 10px auto;
     color: rgba(240, 255, 255, 0.664);
   }
   

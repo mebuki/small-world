@@ -129,16 +129,35 @@
     overflow: scroll;
   }
   
+  .user-events-title {
+    margin: 20px 0 0 30px;
+    font-size: 24px;
+  }
+
   .user-events {
     height: 22vh;
-    width: 77vw;
-    margin: 15px auto;
+    width: 75vw;
+    margin: 10px auto;
   }
   
   .user-event {
     height: 80%;
-    width: 80%;
+    width: 90%;
   }
+
+  .user-event-name {
+    font-size: 17px;
+    margin: 5% 0 0 8%;
+  }
+  
+  .user-event-time {
+    margin: 3% 0 0 33%;
+  }
+  
+  .user-event-liked {
+    margin: 10% 0 0 40%;
+  }
+  
 
   .user-show-hide {
     height: 20vh;
@@ -150,8 +169,22 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 40px auto;
+    margin: 30px auto;
   }
 
+  .user-name {
+    font-size: 27px;
+    font-family: serif;
+  }
+  
+  .edit-user {
+    height: 20px;
+    font-size: 15px;
+  }
+
+  .back-to-event {
+    height: 20px;
+    font-size: 15px;
+  }
 
 }
