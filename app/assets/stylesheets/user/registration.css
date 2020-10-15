@@ -104,8 +104,6 @@
 
  /* スマホ表示時 */
 @media (max-width: 599px) {
-  .signup {
-  }
 
   .signup {
     background-size: cover;

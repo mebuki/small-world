@@ -79,7 +79,7 @@
   }
 
   .tweet-index {
-    margin: 18vh auto 5vw ;
+    margin: 15vh auto 5vw ;
     font-size: 20px;
   }
   
@@ -95,13 +95,12 @@
   
   .tweets {
     height: 30vh;
-    width: 80%;
+    width: 70%;
     margin: 8px auto;
   }
   
   .tweet-title {
     margin-top: 5px;
-
   }
 
 }

@@ -110,32 +110,37 @@
   .show-main {
     height: 70vh;
     width: 100%;
-    margin: 20vh 0 0 0;
+    margin: 15vh 0 0 0;
     overflow: scroll;
     position: absolute;
     left: 0;
   }
   
   .show-name {
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom:7px;
   }
   
   .show-time {
-    font-size: 23px;
+    font-size: 18px;
+    margin-bottom:7px;
   }
   
   .show-place {
-    font-size: 23px;
+    font-size: 18px;
+    margin-bottom:7px;
   }
 
   .show-user-like {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .show-user {
-    margin-right: 20px;
+    margin-right: 0;
+    margin-bottom: 7px;
   }
   
   
@@ -146,8 +151,8 @@
   
   .show-info {
     height: 50vh;
-    width: 70vw;
-    font-size: 18px;
+    width: 80vw;
+    font-size: 15px;
     margin: 20px auto;
   }
   

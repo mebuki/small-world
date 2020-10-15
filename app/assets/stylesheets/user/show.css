@@ -135,9 +135,9 @@
   }
 
   .user-events {
-    height: 22vh;
+    height: 20vh;
     width: 75vw;
-    margin: 10px auto;
+    margin: 8px auto;
   }
   
   .user-event {
@@ -147,7 +147,7 @@
 
   .user-event-name {
     font-size: 17px;
-    margin: 5% 0 0 8%;
+    margin: 3% 0 0 8%;
   }
   
   .user-event-time {
@@ -160,31 +160,29 @@
   
 
   .user-show-hide {
-    height: 20vh;
-    width: 60%;
-    color: black;
-    background: rgba(255, 255, 255, 0.671);
+    height: 16vh;
+    width: 50%;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 30px auto;
+    margin: 20px auto;
   }
 
   .user-name {
-    font-size: 27px;
+    font-size: 20px;
     font-family: serif;
   }
   
   .edit-user {
-    height: 20px;
-    font-size: 15px;
+    height: 15px;
+    font-size: 14px;
   }
 
   .back-to-event {
-    height: 20px;
-    font-size: 15px;
+    height: 15px;
+    font-size: 14px;
   }
 
 }

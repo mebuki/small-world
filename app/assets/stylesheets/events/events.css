@@ -149,7 +149,7 @@
     left: 0;
     height: 80vh;
     width: 100%;
-    margin-top: 18vh;
+    margin-top: 15vh;
   }
   
   .main-events {
@@ -170,8 +170,8 @@
   }
   
   .list-name {
-    font-size: 20px;
-    padding: 10px 0 0 20px;
+    font-size: 18px;
+    padding: 15px 0 0 20px;
   }
   
   .list-time {
