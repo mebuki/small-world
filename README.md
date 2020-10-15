@@ -49,11 +49,8 @@ has_many :like_events, through: :likes, source: :event
 | ----------------- | ---------- | ------------------------------ |
 | purpose_id        | integer    | null: false                    |
 | name              | string     | null: false                    |
-| year_id           | integer    | null: false                    |
-| month_id          | integer    | null: false                    |
-| day_id            | integer    | null: false                    |
-| day_of_week_id    | integer    | null: false                    |
-| event_time_id     | integer    | null: false                    |
+| event_date        | string     | null: false                    |
+| event_time        | string     | null: false                    |
 | place             | string     | null: false                    |
 | info              | text       | null: false                    |
 | likes_count       | integer    |                                |
