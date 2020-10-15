@@ -193,11 +193,13 @@
   }
   
   .show-title {
+    height: 5vh;
     width: 100%;
     font-size: 20px;
   }
   
   .show-text {
+    height: 35vh;
     width: 100%;
     font-size: 18px;
     overflow: scroll;
@@ -224,7 +226,7 @@
   .review-btn {
     height: 33px;
     width: 60px;
-    background: #FF9999	;
+    background: none;
   }
   
   .review-btn:hover {
