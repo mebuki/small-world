@@ -1,7 +1,7 @@
 # README
 
 ## SMALL WORLD
-<img src=https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d.jpg, size="200x180">
+<img src=https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d.jpg, width="80%">
 
 
 ## 概要
