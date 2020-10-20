@@ -1,24 +1,24 @@
 # README
 
 ## SMALL WORLD
-<img src=https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d.jpg, width="80%">
+<img src=https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d.jpg, width="60%">
 
 
 ## 概要
 
 日本に住む外国人と海外に興味がある日本人とのコミュニティ作りの場所を提供するアプリです。<br>
-言語交換、異文化交流、おでかけ、その他の4つのカテゴリーのイベントを作ることができます。
+言語交換、異文化交流、おでかけ、その他の4つのカテゴリーのイベントを作ることができます。<br><br>
 
 
 ## URL
 
-https://small-world-29783.herokuapp.com/
+https://small-world-29783.herokuapp.com/ <br><br>
 
 ## テスト用アカウント
 
-ユーザー名:マリ<br>
-email:m@gmail.com<br>
-password:mmm000
+ユーザー名:マリ <br>
+email:m@gmail.com <br>
+password:mmm000 <br><br>
 
 ## 課題解決
 
@@ -30,10 +30,10 @@ password:mmm000
 このような方々に対して、出会いのきっかけを作れればと思いました。<br>
 そのため、主に以下の4つのカテゴリーのイベントを作成できるようにしました。<br><br>
 
-言語交換　　：　自分が学びたい言語を教えてもらう、また自分も相手の学びたい言語を教える<br>
-異文化交流　：　海外の方に日本の文化を伝える、海外の文化について教えてもらう<br>
-おでかけ　　：　カフェにいく、居酒屋ホッピング、スポーツをする等、気軽に出かけられるメンバーを集める<br>
-その他　　　：　上記3つ以外で、何か困っていること、やりたいことがあれば、そのメンバーを集める<br>
+言語交換　　：　自分が学びたい言語を教えてもらう、また自分も相手の学びたい言語を教える <br>
+異文化交流　：　海外の方に日本の文化を伝える、海外の文化について教えてもらう <br>
+おでかけ　　：　カフェにいく、居酒屋ホッピング、スポーツをする等、気軽に出かけられるメンバーを集める <br>
+その他　　　：　上記3つ以外で、何か困っていること、やりたいことがあれば、そのメンバーを集める <br><br>
 
 
 ## 要件定義
@@ -43,15 +43,13 @@ password:mmm000
 *イベント検索機能　複数の条件でイベントを検索。カテゴリー、日付、時間で検索可能。<br>
 *いいね機能　興味があるイベントにいいね（参加意思を表示）できる。また、いいねされた回数＝参加人数が把握できる。<br>
 *ツイート機能　開催されたイベントに関してツイートを作成。写真、タイトル、詳細を入力。<br>
-*コメント機能　ツイートに対してコメントができる。ユーザー名、コメントが反映される。<br>
+*コメント機能　ツイートに対してコメントができる。ユーザー名、コメントが反映される。<br><br>
 
 
 ## 今後実装予定の機能
 
 *イベントの一覧表示の追加　直近のイベント（日付が近い、場所が近い）の表示<br>
-*ユーザー情報の追加　ユーザーの写真、自己紹介等のプロフィール情報を追加できるようにする<br>
-
-
+*ユーザー情報の追加　ユーザーの写真、自己紹介等のプロフィール情報を追加できるようにする<br><br>
 
 
 
@@ -72,7 +70,7 @@ has_many :events <br>
 has_many :tweets <br>
 has_many :reviews <br>
 has_many :likes <br>
-has_many :like_events, through: :likes, source: :event 
+has_many :like_events, through: :likes, source: :event <br><br>
 
 
 ### eventsテーブル
@@ -90,7 +88,7 @@ has_many :like_events, through: :likes, source: :event
 
 ### Association
 belongs_to :user <br>
-has_many :likes
+has_many :likes <br><br>
 
 
 ### tweetsテーブル
@@ -102,7 +100,7 @@ has_many :likes
 
 ### Association
 belongs_to :user <br>
-has_many :reviews
+has_many :reviews <br><br>
 
 
 ### reviewテーブル
@@ -115,4 +113,4 @@ has_many :reviews
 
 ### Association
 belongs_to :user <br>
-belongs_to :tweet
+belongs_to :tweet <br><br>
