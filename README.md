@@ -1,7 +1,7 @@
 # README
 
 ## SMALL WORLD
-![smallworld](https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d)
+<img src=https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d.jpg>
 
 
 ## 概要
@@ -16,13 +16,13 @@ https://small-world-29783.herokuapp.com/
 
 ## テスト用アカウント
 
-ユーザー名:マリ
-email:m@gmail.com
+ユーザー名:マリ<br>
+email:m@gmail.com<br>
 password:mmm000
 
 ## 課題解決
 
-日本に住む外国人と海外に興味がある日本人とのコミュニティの場を提供できればと思い、このアプリを作成しました。
+日本に住む外国人と海外に興味がある日本人とのコミュニティの場を提供できればと思い、このアプリを作成しました。<br><br>
 
 外国人　→　日本に住んでいるが、なかなか日本人の友達ができない。まだ日本語がうまくないから生活が不便。
 日本人　→　英語を喋れるようになりたい、異文化に興味がある。でも周り日本人ばっかり。
