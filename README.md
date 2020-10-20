@@ -1,31 +1,63 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## SMALL WORLD
+![smallworld](https://gyazo.com/0139337727a2a82bd0f2ddd77dc17d6d)
 
-Things you may want to cover:
 
-* Ruby version
+## 概要
 
-* System dependencies
+日本に住む外国人と海外に興味がある日本人とのコミュニティ作りの場所を提供するアプリです。<br>
+言語交換、異文化交流、おでかけ、その他の4つのカテゴリーのイベントを作ることができます。
 
-* Configuration
 
-* Database creation
+## URL
 
-* Database initialization
+https://small-world-29783.herokuapp.com/
 
-* How to run the test suite
+## テスト用アカウント
 
-* Services (job queues, cache servers, search engines, etc.)
+ユーザー名:マリ
+email:m@gmail.com
+password:mmm000
 
-* Deployment instructions
+## 課題解決
 
-* ...
+日本に住む外国人と海外に興味がある日本人とのコミュニティの場を提供できればと思い、このアプリを作成しました。
 
-# テーブル設計
+外国人　→　日本に住んでいるが、なかなか日本人の友達ができない。まだ日本語がうまくないから生活が不便。
+日本人　→　英語を喋れるようになりたい、異文化に興味がある。でも周り日本人ばっかり。
 
-## usersテーブル
+このような方々に対して、出会いのきっかけを作れればと思いました。
+そのため、主に以下の4つのカテゴリーのイベントを作成できるようにしました。
+
+言語交換　　：　自分が学びたい言語を教えてもらう、また自分も相手の学びたい言語を教える
+異文化交流　：　海外の方に日本の文化を伝える、海外の文化について教えてもらう
+おでかけ　　：　カフェにいく、居酒屋ホッピング、スポーツをする等、気軽に出かけられるメンバーを集める
+その他　　　：　上記3つ以外で、何か困っていること、やりたいことがあれば、そのメンバーを集める
+
+
+## 要件定義
+
+*ユーザー管理機能　deviseを用いて、ユーザーを管理。ニックネーム、Eメール、パスワード、出身国、住んでいる都道府県を入力。
+*イベント作成機能　4つのカテゴリーから1つを選択しイベントを作成。写真、タイトル、日時、場所、詳細を入力。
+*イベント検索機能　複数の条件でイベントを検索。カテゴリー、日付、時間で検索可能。
+*いいね機能　興味があるイベントにいいね（参加意思を表示）できる。また、いいねされた回数＝参加人数が把握できる。
+*ツイート機能　開催されたイベントに関してツイートを作成。写真、タイトル、詳細を入力。
+*コメント機能　ツイートに対してコメントができる。ユーザー名、コメントが反映される。
+
+
+## 今後実装予定の機能
+
+*イベントの一覧表示の追加　直近のイベント（日付が近い、場所が近い）の表示
+*ユーザー情報の追加　ユーザーの写真、自己紹介等のプロフィール情報を追加できるようにする
+
+
+
+
+
+## テーブル設計
+
+### usersテーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -35,7 +67,7 @@ Things you may want to cover:
 | country_id        | integer    | null: false                    |
 | prefecture_id     | integer    | null: false                    |
 
-## Association
+### Association
 has_many :events
 has_many :tweets
 has_many :reviews
@@ -43,7 +75,7 @@ has_many :likes
 has_many :like_events, through: :likes, source: :event
 
 
-## eventsテーブル
+### eventsテーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -56,25 +88,24 @@ has_many :like_events, through: :likes, source: :event
 | likes_count       | integer    |                                |
 | user              | references | null: false, foreign_key: true |
 
-## Association
+### Association
 belongs_to :user
 has_many :likes
 
 
-## tweetsテーブル
+### tweetsテーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | text              | text       | null: false                    |
 | user              | references | null: false, foreign_key: true |
 
-## Association
+### Association
 belongs_to :user
 has_many :reviews
 
 
-
-## reviewテーブル
+### reviewテーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -82,6 +113,6 @@ has_many :reviews
 | user              | references | null: false, foreign_key: true |
 | tweet             | references | null: false, foreign_key: true |
 
-## Association
+### Association
 belongs_to :user
 belongs_to :tweet
