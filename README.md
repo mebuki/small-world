@@ -53,6 +53,7 @@ password : mmm000 <br><br>
 ### イベント検索機能
  複数の条件でイベントを検索できる<br>
  カテゴリー、日付、時間で検索可能<br>
+<img src=38d16363ec2eb553bff82ea480eeaeb1.gif>
 <br><br>
 
 ### いいね機能
