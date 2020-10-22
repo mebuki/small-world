@@ -36,6 +36,30 @@
   font-family: cursive;
 }
 
+.top-info1 {
+  font-size: 3.3vh;
+  font-family: 'Chalkduster';
+  margin: 13vh 0 0 20vw;
+}
+
+.top-infos {
+  width: 38vw;
+  height: 30vh;
+  background: rgba(255, 255, 255, 0.253);
+  padding: 20px 40px;
+  margin: 3vh 0 0 24vw;
+}
+
+.top-info2 {
+  font-size: 2.4vh;
+  font-family: 'klee';
+  margin-bottom: 30px;
+}
+
+.top-info3 {
+  font-size: 2.2vh;
+  font-family: 'Hannotate SC';
+}
 
 
 /* スマホ表示時 */
@@ -63,6 +87,32 @@
   
   .top-ins{
     font-size: 18px;
- 
   }
+
+  .top-info1 {
+    font-size: 3vh;
+    font-family: 'Chalkduster';
+    margin: 13vh 0 0 5vw;
+  }
+  
+  .top-infos {
+    width: 70vw;
+    height: 30vh;
+    background: rgba(255, 255, 255, 0.253);
+    padding: 20px 18px;
+    margin: 3vh auto;
+  }
+  
+  .top-info2 {
+    font-size: 2vh;
+    font-family: 'klee';
+    margin-bottom: 30px;
+  }
+  
+  .top-info3 {
+    font-size: 1.8vh;
+    font-family: 'Hannotate SC';
+  }
+  
+
 }
