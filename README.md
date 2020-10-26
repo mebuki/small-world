@@ -154,3 +154,8 @@ has_many :reviews <br><br>
 ### Association
 belongs_to :user <br>
 belongs_to :tweet <br><br>
+
+
+## 開発環境
+Ruby / Ruby on Rails / MySQL / Github <br>
+AWS / Visual Studio Code
