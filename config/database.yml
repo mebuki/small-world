@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: small_world_production
-  username: small_world
-  password: <%= ENV['SMALL_WORLD_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
