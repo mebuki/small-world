@@ -12,7 +12,7 @@
 
 ## URL
 
-[small world](http://54.150.90.203/) <br><br>
+アプリはここ⇨[small world](http://54.150.90.203/) <br><br>
 
 ## テスト用アカウント
 
