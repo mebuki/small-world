@@ -12,7 +12,7 @@
 
 ## URL
 
-https://small-world-29783.herokuapp.com/ <br><br>
+[small world](http://54.150.90.203/) <br><br>
 
 ## テスト用アカウント
 
